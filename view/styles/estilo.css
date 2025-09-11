@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #3b0d16; /* sua cor vinho */
+}
+
+/* logo */
+#logo {
+  height: 150px;
+  width: 150px;
+}
+
+/* ícones do topo */
+img.icon {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+  float: right;   /* mantém seu estilo */
+}
+
+/* grid de categorias */
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+   
+
+}
+
+img.categoria {
+  width: 100%;
+  max-height: 700px;
+  max-width: 800px;  /* limite de altura */
+  object-fit: cover;  /* corta para caber sem distorcer */
+  border-radius: 6px;
+}
+
+/*barra de pesquisa */
+#search-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#search-input {
+  width: 900px;
+  height:80px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 24px;
+}
+
+#search-button {
+  padding: 8px 12px;
+  border: none;
+  height: 70px;
+  width: 90px;
+  border-radius: 20px;
+  background-color: #8d4654;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 1%;
+}
+
+#search-button:hover {
+  background-color: #aa6270;
+}
+
+#cate{
+    margin:0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+.icon:hover {
+  transform: scale(1.2); /* aumenta 20% */
+}
