@@ -1,3 +1,17 @@
+@import url(/ecommerceG3/view/fonts/Alice/Alice-Regular.ttf);
+@font-face {
+    font-family: "principal";
+    src: url(/ecommerceG3/view/fonts/Alice/Alice-Regular.ttf)
+    format('truetype');
+}
+
+@import url(/ecommerceG3/view/fonts/Inria_Sans/InriaSans-Regular.ttf);
+@font-face {
+    font-family: "secundaria";
+    src: url(/ecommerceG3/view/fonts/Inria_Sans/InriaSans-Regular.ttf)
+    format('truetype');
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -83,6 +97,45 @@ img.categoria {
 .icon:hover {
   transform: scale(1.2); /* aumenta 20% */
 }
+
 .categoria:hover {
  filter: brightness(1.3);
+}
+
+/*Sobre Nós*/
+
+#quadrado-branco{
+  width: 1200px;
+  height: 1000px;
+  background-color: white;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+
+#quadrado-branco h1{
+  color: #3b0d16;
+  text-align: center;
+  font-family: 'principal';
+  font-size: 35pt;
+}
+
+#logo-vinho{
+  width: 500px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.texto-informativo{
+  font-family: 'secundaria';
+  line-height: 1.5;
+  font-size: 18pt;
+  text-align: justify;
+  margin: 40px 50px;
+  color: #3b0d16;
+}
+
+#slogan{
+  font-weight: bold;
+  text-align: center;
 }
