@@ -8,3 +8,4 @@ document.getElementById("search-button").addEventListener("click", function() {
     alert("Digite algo para pesquisar!");
   }
 });
+ 
