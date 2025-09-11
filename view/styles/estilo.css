@@ -83,3 +83,6 @@ img.categoria {
 .icon:hover {
   transform: scale(1.2); /* aumenta 20% */
 }
+.categoria:hover {
+ filter: brightness(1.3);
+}
