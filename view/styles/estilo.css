@@ -139,3 +139,29 @@ img.categoria {
   font-weight: bold;
   text-align: center;
 }
+
+/*pagina sala*/
+img.sala{
+  padding:40px;
+  border:#aa6270 15px solid;
+  border-radius: 10px;
+  width:400;
+  height: 500px;
+  display: inline-block;
+  margin:1%;
+}
+
+#secSala{
+    margin:0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+#legenda{
+  background-color: white;
+  height: 50px;
+  width:200px;
+  color:#8d4654;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 20px;
+}
