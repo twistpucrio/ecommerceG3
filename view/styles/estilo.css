@@ -165,6 +165,7 @@ img.sala{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 20px;
 }
+ 
 #rodape {
   width: 100%;
   background-color: white;
@@ -199,4 +200,9 @@ a.texto-rodape, h2.texto-rodape {
 
 .link-rodape:active{
   text-decoration: none;
+ }
+
+
+ a.texto-rodape:hover{
+  text-decoration: underline;
  }
