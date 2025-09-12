@@ -202,6 +202,7 @@ a.texto-rodape, h2.texto-rodape {
   text-decoration: none;
  }
 
+
  a.texto-rodape:hover{
   text-decoration: underline;
  }
