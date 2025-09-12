@@ -140,7 +140,7 @@ img.categoria {
   text-align: center;
 }
 
-/*pagina sala*/
+ /*pagina sala*/
 img.sala{
   padding:40px;
   border:#aa6270 15px solid;
@@ -164,4 +164,39 @@ img.sala{
   color:#8d4654;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 20px;
+ 
+#rodape {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 15px 0 30px 0;
+  text-align: center;
+  margin-top: 30px;
 }
+
+a.texto-rodape, h2.texto-rodape {
+  font-family: 'secundaria';
+  font-size: 15pt;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.link-rodape {
+  font-family: 'secundaria';
+  font-size: 12pt;
+  color: black;
+  text-decoration: none;
+}
+
+.link-rodape:hover{
+  color: #8d4654;
+}
+
+.link-rodape:visited{
+  text-decoration: none;
+}
+
+.link-rodape:active{
+  text-decoration: none;
+ }
