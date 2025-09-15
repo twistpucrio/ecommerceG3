@@ -49,18 +49,36 @@ function carregarDados() {
         let card = document.createElement("div");
         card.classList.add("produto");
 
-        card.innerHTML = `
-          <img src="${produto.imagem}" alt="${produto.nome}" width="150"/>
-          <p>${produto.nome}</p>
-          <p>Preço: R$ ${produto.preco}</p>
-          <button onclick="adicionarAoCarrinho('${produto.nome}', ${produto.id}, ${produto.preco},'${produto.imagem}')">Adicionar ao carrinho</button>
-        `;
+       card.innerHTML = `
+  <img class="produto-img" src="${produto.imagem}" alt="${produto.nome}">
+  <p class="nome-produto">${produto.nome}</p>
+  <p class="preco-produto">Preço: R$ ${produto.preco}</p>
 
+  <button
+    class="btn-carrinho"
+    data-id="${produto.id}"
+    data-nome="${produto.nome}"
+    data-preco="${produto.preco}"
+    data-imagem="${produto.imagem}"
+  >
+    Adicionar ao carrinho
+  </button>
+`;
         divSecSala.appendChild(card);
       });
     });
 }
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-carrinho');
+  if (!btn) return;
 
+  const nome   = btn.dataset.nome;
+  const id     = Number(btn.dataset.id);
+  const preco  = Number(btn.dataset.preco);
+  const imagem = btn.dataset.imagem;
+
+  adicionarAoCarrinho(nome, id, preco, imagem);
+});
 // Função para salvar no carrinho
 function adicionarAoCarrinho(nome, id, preco,imagem) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
