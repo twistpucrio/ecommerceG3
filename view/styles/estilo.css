@@ -151,11 +151,7 @@ img.sala{
   margin:1%;
 }
 
-#secSala{
-    margin:0 auto;
-    text-align: center;
-    justify-content: center;
-}
+
 
 #legenda{
   background-color: white;
@@ -205,3 +201,83 @@ a.texto-rodape, h2.texto-rodape {
  a.texto-rodape:hover{
   text-decoration: underline;
  }
+
+p.nome-produto,p.preco-produto{
+  color:white;
+  font-family: "primaria";
+  font-size: 15px;
+  text-align: center;
+  justify-items: center;
+}
+button.btn-carrinho{
+  background-color: #3ac79d;
+  color:white;
+  font-family: "primaria";
+  border-radius:20px;
+  border: 5px #3ac79d solid;
+  font-size: 15px;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+/*
+.produto-img{
+  display: inline-block;
+  width: 500px;         
+  height: 500px ;               
+  object-fit: contain;            
+  background: #fff;            
+  border-radius: 8px;
+ 
+}
+
+#secSala {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;         
+  padding: 20px;
+  justify-items: center;
+}
+  */
+#secSala{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+ .produto-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 320px;          /* aumente para deixar os cards maiores */
+  background: #2c0d0d;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  overflow: hidden;          /* nada vaza do card */
+  box-sizing: border-box;
+}
+
+
+.produto-img{
+  display: block;
+  width: 100%;            
+  aspect-ratio: 4 / 3;     
+  height: 400px;             
+  object-fit: contain;       
+  background: #3b0d16;          
+  border-radius: 10px;
+}
+
+ 
+.nome-produto{ color:#fff; font-weight:600; margin:4px 0 0; }
+.preco-produto{ color:#ffcc00; margin:0 0 6px; }
+.btn-carrinho{ width:100%; padding:10px; border:none; border-radius:8px; background:#28a745; color:#fff; cursor:pointer; }
+.btn-carrinho:hover{ background:#218838; }
+button.btn-carrinho:hover{
+  background-color: #1f6e57;
+}
