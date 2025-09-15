@@ -79,6 +79,121 @@
       "qtd": 10,
       "descricao": "cômoda de madeira com gavetas",
       "imagem": "IMG/comoda.png"
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {
+      "id":11 ,
+      "nome": "Armário de escritório",
+      "preco": 1500.00,
+      "qtd": 5,
+      "descricao": "armário ",
+      "imagem": "IMG/ArmariodeEscritorio.png"
+    },
+    {
+      "id":12 ,
+      "nome": "Cadeira confortável",
+      "preco": 550.00,
+      "qtd": 15,
+      "descricao": "cadeira confortável para trabalho e reuniões",
+      "imagem": "IMG/CadeiraConfortaveldeEscritorio.png"
+    },
+    {
+      "id": 13,
+      "nome": "Cadeira básica",
+      "preco": 350.00,
+      "qtd": 10,
+      "descricao": "cadeira básica de escritório. Simples e confortável",
+      "imagem": "IMG/CadeiradeEscritorioBasica.png"
+    },
+    {
+      "id": 14,
+      "nome": " Conjunto de cadeiras",
+      "preco": 700.00,
+      "qtd": 10,
+      "descricao": "conjunto de cadeiras básicas para empresa",
+      "imagem": "IMG/ConjuntodeCadeirasparaFuncionarios.png"
+    },
+    {
+      "id": 15,
+      "nome": "cômoda",
+      "preco": 850.00,
+      "qtd": 10,
+      "descricao": "cômoda de madeira com gavetas",
+      "imagem": "IMG/comoda.png"
+    },
+    {
+      "id": 16,
+      "nome": "tapete sala",
+      "preco": 250.00,
+      "qtd": 10,
+      "descricao": "tapete macio e estiloso",
+      "imagem": "IMG/tapeteSala.png"
+    },
+    {
+      "id": 17,
+      "nome": "mesa vidro",
+      "preco": 950.00,
+      "qtd": 10,
+      "descricao": "mesa de vidro elegante",
+      "imagem": "IMG/mesaVidro.png"
+    },
+    {
+      "id": 18,
+      "nome": "sofa verde",
+      "preco": 750.00,
+      "qtd": 10,
+      "descricao": "sofá verde moderno",
+      "imagem": "IMG/sofaVerde.png"
+    },
+    {
+      "id": 19,
+      "nome": "estante sala",
+      "preco": 600.00,
+      "qtd": 10,
+      "descricao": "estante espaçosa para sala",
+      "imagem": "IMG/estanteSala.png"
+    },
+    {
+      "id": 20,
+      "nome": "cômoda",
+      "preco": 850.00,
+      "qtd": 10,
+      "descricao": "cômoda de madeira com gavetas",
+      "imagem": "IMG/comoda.png"
     }
   ]
 }
