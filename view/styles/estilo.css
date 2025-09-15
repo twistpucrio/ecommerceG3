@@ -294,4 +294,50 @@ button.btn-carrinho:hover{
   margin-top: 60px;
   margin-bottom: 60px;
  }
- 
+
+.grid{ 
+  display:grid; 
+  grid-template-columns: repeat(2,1fr); 
+  gap:20px;
+}
+
+.card{ 
+  background:#3b0d16;
+  border-radius:5px;
+  overflow:hidden;
+  margin: 30px;
+}
+
+.card img{
+  width: 100%;
+  object-fit:cover; 
+  display:block;
+}
+
+.card-info {
+  padding:10px;
+  font-size:18px;
+  font-family: 'secundaria';
+  color: white;
+  text-align: center;
+}
+
+.btn-carrinho {
+  display: block;
+  width: 90%;
+  margin: 10px auto 15px auto;
+  padding: 10px;
+  background-color: #0c7019; /* cor do botão */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-carrinho:hover {
+  background-color: #ff4c3b;
+  transform: translateY(-2px);
+}

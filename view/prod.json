@@ -79,6 +79,24 @@
       "qtd": 10,
       "descricao": "cômoda de madeira com gavetas",
       "imagem": "IMG/comoda.png"
+    },
+
+
+    {
+      "id": 11,
+      "nome": "Espreguiçadeira de pano",
+      "preco": 399.99,
+      "qtd": 35,
+      "descricao": "Espreguiçadeira confortável de pano na cor amarela",
+      "imagem": "IMG/jardim/espreguicadeira-amarela.png"
+    },
+        {
+      "id": 12,
+      "nome": "Sofá outdoor de pano",
+      "preco": 599.99,
+      "qtd": 15,
+      "descricao": "Sofá cômodo e espaçoso de pano na cor azul marinho",
+      "imagem": "IMG/jardim/sofa-azul-marinho.png"
     }
   ]
 }
