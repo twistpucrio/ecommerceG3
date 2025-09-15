@@ -206,3 +206,16 @@ a.texto-rodape, h2.texto-rodape {
  a.texto-rodape:hover{
   text-decoration: underline;
  }
+
+ /*Página dos produtos*/
+
+ #produtos-container{
+  width: 60%;
+  height: 700px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  left: 700px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+ }
