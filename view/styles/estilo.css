@@ -198,10 +198,12 @@ a.texto-rodape, h2.texto-rodape {
   text-decoration: none;
  }
 
+
  a.texto-rodape:hover{
   text-decoration: underline;
  }
 
+ 
 p.nome-produto,p.preco-produto{
   color:white;
   font-family: "primaria";
@@ -281,3 +283,15 @@ button.btn-carrinho{
 button.btn-carrinho:hover{
   background-color: #1f6e57;
 }
+ 
+ #produtos-container{
+  width: 60%;
+  height: 700px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  left: 700px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+ }
+ 
