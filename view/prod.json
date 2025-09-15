@@ -1,0 +1,21 @@
+{ "produtos":[
+    {
+        "id":"caderiaSala",
+        "nome":"cadeira sala" ,
+        "preco": 295.00,
+        "qtd":10,
+        "descricao":"otima cadeira"
+    
+    },
+      {
+        "id":"sofaSala",
+        "nome":"sofa sala" ,
+        "preco": 599.00,
+        "qtd":10,
+        "desc":"otimo sofa"
+         
+
+    }
+]
+
+}
