@@ -50,7 +50,12 @@
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
     if (carrinho.length === 0) {
-      div.innerHTML = '<p>Seu carrinho está vazio.</p>';
+      div.innerHTML = `
+  <div class="msg-vazio">
+    <p>Oops... parece que seu carrinho está vazio!</p>
+    <a href="index.html" class="btn-voltar">Ver produtos</a>
+  </div>
+`;
       return;
     }
 
