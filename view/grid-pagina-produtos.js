@@ -7,7 +7,25 @@ fetch('prod.json')
   })
   .then(data => {
     const produtos = data.produtos;
-    const filtrados = produtos.filter(p => p.id >= 11 && p.id <= 23);
+    const filtradosSala = produtos.filter(p => p.id >= 1 && p.id <= 10);
+    const filtradosJardim = produtos.filter(p => p.id >= 11 && p.id <= 23);
+    const filtradosTodos = produtos.filter(p => p.id >= 1 && p.id <= 23);
+    const filtradosQuarto = produtos.filter(p => p.id >= 40 && p.id <= 55);
+    const filtradosEscritorio = produtos.filter(p => p.id >= 110 && p.id <= 118);
+    let filtrados = [];
+
+    if (pagina === "jardim") {
+      filtrados = filtradosJardim;
+    } else if (pagina === "sala") {
+      filtrados = filtradosSala;
+    }
+    else if(pagina=="todosProdutos"){
+      filtrados= filtradosTodos;
+    } else if (pagina== "quarto"){
+      filtrados=filtradosQuarto;
+    } else if (pagina== "escritorio"){
+      filtrados= filtradosEscritorio;
+    }
 
     filtrados.forEach(p => {
       const card = document.createElement('div');
