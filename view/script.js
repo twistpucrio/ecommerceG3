@@ -41,4 +41,21 @@ function adicionarAoCarrinho(nome, id, preco,imagem) {
 
 window.addEventListener("load", carregarDados);
 
+//Função do contador do carrinho:
+
+function updateCartCounter(count) {
+    const counterElement = document.getElementById('cart-counter');
+    
+    if (count > 0) {
+        counterElement.textContent = count;
+        counterElement.style.display = 'block'; // Mostra o contador
+    } else {
+        counterElement.style.display = 'none'; // Esconde o contador
+    }
+}
+
+// Para testar, chame a função com um número.
+// Na sua aplicação real, chame esta função
+// sempre que um item for adicionado ou removido.
+updateCartCounter(3); // Exemplo: 3 itens no carrinho
 
