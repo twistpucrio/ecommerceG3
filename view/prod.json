@@ -116,7 +116,7 @@
 
 
     {
-      "id":11 ,
+      "id":110 ,
       "nome": "Armário de escritório",
       "preco": 1500.00,
       "qtd": 5,
@@ -124,7 +124,7 @@
       "imagem": "IMG/ArmariodeEscritorio.png"
     },
     {
-      "id":12 ,
+      "id":111 ,
       "nome": "Cadeira confortável",
       "preco": 550.00,
       "qtd": 15,
@@ -132,7 +132,7 @@
       "imagem": "IMG/CadeiraConfortaveldeEscritorio.png"
     },
     {
-      "id": 13,
+      "id": 112,
       "nome": "Cadeira básica",
       "preco": 350.00,
       "qtd": 10,
@@ -140,7 +140,7 @@
       "imagem": "IMG/CadeiradeEscritorioBasica.png"
     },
     {
-      "id": 14,
+      "id": 113,
       "nome": " Conjunto de cadeiras",
       "preco": 700.00,
       "qtd": 10,
@@ -148,48 +148,48 @@
       "imagem": "IMG/ConjuntodeCadeirasparaFuncionarios.png"
     },
     {
-      "id": 15,
-      "nome": "cômoda",
-      "preco": 850.00,
-      "qtd": 10,
-      "descricao": "cômoda de madeira com gavetas",
-      "imagem": "IMG/comoda.png"
+      "id": 114,
+      "nome": "Luminária",
+      "preco": 200.00,
+      "qtd": 20,
+      "descricao": "luminária para escritório",
+      "imagem": "IMG/LuminariaparaEscritorio.png"
     },
     {
-      "id": 16,
-      "nome": "tapete sala",
+      "id": 115,
+      "nome": "Mesa simples",
       "preco": 250.00,
       "qtd": 10,
-      "descricao": "tapete macio e estiloso",
-      "imagem": "IMG/tapeteSala.png"
+      "descricao": "Mesa simples para ambiente de trabalho",
+      "imagem": "IMG/MesaSimplesdeEscritorio.png"
     },
     {
-      "id": 17,
-      "nome": "mesa vidro",
+      "id": 116,
+      "nome": "Mesa para funcionários",
       "preco": 950.00,
       "qtd": 10,
-      "descricao": "mesa de vidro elegante",
-      "imagem": "IMG/mesaVidro.png"
+      "descricao": "Mesa para sala de funcionários",
+      "imagem": "IMG/MesaFuncionarios.png"
     },
     {
-      "id": 18,
-      "nome": "sofa verde",
-      "preco": 750.00,
+      "id": 116,
+      "nome": "Cadeira plus",
+      "preco": 2050.00,
+      "qtd": 5,
+      "descricao": "Cadeira super confortável e elegante para um escritório chique e relaxante.",
+      "imagem": "IMG/CadeiraChique.png"
+    },
+    {
+      "id": 117,
+      "nome": "Móvel com gavetas",
+      "preco": 1200.00,
       "qtd": 10,
-      "descricao": "sofá verde moderno",
-      "imagem": "IMG/sofaVerde.png"
+      "descricao": "Móvel com gavetas para escritório",
+      "imagem": "IMG/MovelChique.png"
     },
     {
-      "id": 19,
-      "nome": "estante sala",
-      "preco": 600.00,
-      "qtd": 10,
-      "descricao": "estante espaçosa para sala",
-      "imagem": "IMG/estanteSala.png"
-    },
-    {
-      "id": 20,
-      "nome": "cômoda",
+      "id": 118,
+      "nome": "Mesa",
       "preco": 850.00,
       "qtd": 10,
       "descricao": "cômoda de madeira com gavetas",
