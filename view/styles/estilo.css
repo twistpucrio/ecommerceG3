@@ -371,3 +371,39 @@ h1.carrinho{
   background:#ef4444; color:#fff; font-weight:700;
 }
 .btn-remover:hover{ filter:brightness(1.05); }
+
+
+.msg-vazio {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  margin: 80px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-family: 'secundaria';
+  animation: aparecer 0.4s ease-in-out;
+}
+
+.msg-vazio p {
+  font-size: 20pt;
+  color: #3b0d16;
+  margin-bottom: 30px;
+}
+
+/* Botão 'Ver produtos' */
+.btn-voltar {
+  display: inline-block;
+  background-color: #3b0d16;
+  color: white;
+  text-decoration: none;
+  font-size: 14pt;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-voltar:hover {
+  background-color: #5a1f2c;
+  transform: translateY(-2px);
+}
