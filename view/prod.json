@@ -109,6 +109,46 @@
       "descricao": "Sofá cômodo e espaçoso de pano na cor azul marinho",
       "imagem": "IMG/jardim/sofa-azul-marinho.png"
     },
+    {
+      "id": 13,
+      "nome": "Churrasqueira moderna metálica",
+      "preco": 299.99,
+      "qtd": 25,
+      "descricao": "Churrasqueira moderna e de vida útil longa na cor laranja",
+      "imagem": "IMG/jardim/churrasqueira-laranja.png"
+    },
+        {
+      "id": 14,
+      "nome": "Conjunto: mesa de vidro e cadeiras",
+      "preco": 629.99,
+      "qtd": 15,
+      "descricao": "Mesa de vidro espaçosa acompanha de cadeiras",
+      "imagem": "IMG/jardim/mesa-vidro-preta.png"
+    },
+    {
+      "id": 15,
+      "nome": "Rede de pano para descanso",
+      "preco": 129.99,
+      "qtd": 40,
+      "descricao": "Rede de pano firme e confortável para descansar na cor branca",
+      "imagem": "IMG/jardim/rede-branca.png"
+    },
+    {
+      "id": 16,
+      "nome": "Mesa de centro de madeira",
+      "preco": 129.99,
+      "qtd": 40,
+      "descricao": "Mesa de centro de madeira escura",
+      "imagem": "IMG/jardim/mesa-vidro-preta.png"
+    },
+    {
+      "id": 17,
+      "nome": "Puff redondo em tricô grosso",
+      "preco": 129.99,
+      "qtd": 40,
+      "descricao": "Puff redondo e confortável, estilo artesanal, na cor vermelha",
+      "imagem": "IMG/jardim/puff-vermelho.png"
+    },
         {
       "id": 30,
       "nome": "Armario Moderno",
