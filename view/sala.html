@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Home</title>
     <link rel="stylesheet" href= "styles/estilo.css">
+    <script src="grid-pagina-produtos.js" defer></script>
 </head>
 <body>
     
@@ -19,7 +20,11 @@
         <button id="search-button">Buscar</button>
     </div>
 
-     <section id="secSala">  
+    <div id="produtos-container">
+        <div id="grid" class="grid"></div>
+    </div>
+
+<!-- <section id="secSala">  
 
  
         <a href=" "> <img id="cadeiraSala" class="sala" src="IMG/cadeira.png" alt="cadeira"/> </a>
@@ -33,8 +38,11 @@
         <a href=""> <img id="estante"  class="sala" src="IMG/estanteSala.png" alt="estante"/> </a>
         <a href=""> <img id="comoda"  class="sala" src="IMG/comoda.png" alt="comoda"/> </a>
 
-    </section>
+    </section>-->
 
+    <script>
+        let pagina = "sala";
+    </script>
      
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
