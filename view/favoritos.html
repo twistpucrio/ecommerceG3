@@ -14,7 +14,56 @@
     <a href="index.html">  <img id="logo" class="logo" src="IMG/Screenshot 2025-09-11 160009.png" alt="ML"><img></a>
     <a href="index.html">  <img id="home" class="icon" src="IMG/home.png" alt="home"/> </a>
        <br/><br/>
-    
+   
+        
+     <h1 class="fav">Lista de Favoritos</h1>
+      
+
+  <div id="listaFavoritos"></div>
+
+<script>
+  function renderFavoritos() {
+    const div = document.getElementById('listaFavoritos');
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    if (favoritos.length === 0) {
+      div.innerHTML = '<p>Sua lista de favoritos esta vazia.</p>';
+      return;
+    }
+
+    // cada item vem com um botão Remover
+    div.innerHTML = favoritos.map((item, i) => `
+      <div class="item-favoritos">
+        <img class="img-favoritos" src="${item.imagem}" width="100" alt="${item.nome}">
+        <p>${item.nome} - R$ ${item.preco}</p>
+        <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
+          Remover
+        </button>
+      </div>
+    `).join('');
+  }
+
+  // chama ao carregar a página
+  window.addEventListener('load', renderFavoritos);
+</script>
+
+<script>
+  // clique em qualquer botão .btn-remover dentro do documento
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-remover');
+    if (!btn) return;
+
+    const idx = Number(btn.dataset.index);
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+
+    // remove 1 item na posição idx
+    favoritos.splice(idx, 1);
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+
+    // re-renderiza a lista
+    renderFavoritos();
+  });
+</script>
        
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
