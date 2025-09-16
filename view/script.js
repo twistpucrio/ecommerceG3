@@ -10,57 +10,18 @@ document.getElementById("search-button").addEventListener("click", function() {
 });
 
 
-//parte do teste do json
-/*function carregarDados(){
-    let divisao = document.querySelector("#divProduto")
-        divisao.innerHTML+= "<ol>"
-        fetch("prod.json").then((response) =>{
-            response.json().then((prod) =>{
-                           prod.produtos.map((produto) =>{
-                            divisao.innerHTML+="<li> {"
-                            +produto.id+", "
-                            + produto.nome+", " //aqui colocar os nomes igual ta no json
-                            +produto.preco+", "
-                            +produto.qtd+", "
-                            +produto.desc+ "} </li>";
-                            console.log(produto.cod);
-                            console.log(produto.nome);
-                            console.log(produto.preco);
-                        })          
-            })
-        })
-        divisao.innerHTML+= "</ol>"
-}
+ 
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.btn-carrinho');
+  if (!btn) return;
 
-window.addEventListener("load", function(){
-    carregarDados()
-})*/
+  const nome   = btn.dataset.nome;
+  const id     = Number(btn.dataset.id);
+  const preco  = Number(btn.dataset.preco);
+  const imagem = btn.dataset.imagem;
 
-//carrinho teste
-function carregarDados() {
-  let divSecSala = document.getElementById("secSala");
-  divSecSala.innerHTML = ""; // limpar antes de carregar
-
-  fetch("prod.json")
-    .then(response => response.json())
-    .then(data => {
-      data.produtos.forEach(produto => {
-        // Criar um "card" para cada produto
-        let card = document.createElement("div");
-        card.classList.add("produto");
-
-        card.innerHTML = `
-          <img src="${produto.imagem}" alt="${produto.nome}" width="150"/>
-          <p>${produto.nome}</p>
-          <p>Preço: R$ ${produto.preco}</p>
-          <button onclick="adicionarAoCarrinho('${produto.nome}', ${produto.id}, ${produto.preco},'${produto.imagem}')">Adicionar ao carrinho</button>
-        `;
-
-        divSecSala.appendChild(card);
-      });
-    });
-}
-
+  adicionarAoCarrinho(nome, id, preco, imagem);
+});
 // Função para salvar no carrinho
 function adicionarAoCarrinho(nome, id, preco,imagem) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];

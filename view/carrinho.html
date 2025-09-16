@@ -16,7 +16,8 @@
        <br/><br/>
    
        <!--tentando adicionar itens -->
-     <h1>Seu Carrinho</h1>
+     <h1 class="carrinho">Seu Carrinho</h1>
+     <!--  
   <div id="listaCarrinho"></div>
 
   <script>
@@ -29,7 +30,7 @@
       carrinho.forEach(item => {
         div.innerHTML += `
           <div class="item-carrinho">
-            <img src="${item.imagem}" width="100"/>
+            <img class="img-carrinho" src="${item.imagem}" width="100"/>
             <p>${item.nome} - R$ ${item.preco}</p>
           </div>
         `;
@@ -38,6 +39,54 @@
       });
     }
   </script>
+
+  -->
+
+  <div id="listaCarrinho"></div>
+
+<script>
+  function renderCarrinho() {
+    const div = document.getElementById('listaCarrinho');
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    if (carrinho.length === 0) {
+      div.innerHTML = '<p>Seu carrinho está vazio.</p>';
+      return;
+    }
+
+    // cada item vem com um botão Remover
+    div.innerHTML = carrinho.map((item, i) => `
+      <div class="item-carrinho">
+        <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
+        <p>${item.nome} - R$ ${item.preco}</p>
+        <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
+          Remover
+        </button>
+      </div>
+    `).join('');
+  }
+
+  // chama ao carregar a página
+  window.addEventListener('load', renderCarrinho);
+</script>
+
+<script>
+  // clique em qualquer botão .btn-remover dentro do documento
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.btn-remover');
+    if (!btn) return;
+
+    const idx = Number(btn.dataset.index);
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    // remove 1 item na posição idx
+    carrinho.splice(idx, 1);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+    // re-renderiza a lista
+    renderCarrinho();
+  });
+</script>
        
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
