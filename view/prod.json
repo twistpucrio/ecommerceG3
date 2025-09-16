@@ -82,6 +82,17 @@
     },
 
 
+
+
+
+
+
+
+
+
+
+
+
     {
       "id": 11,
       "nome": "Espreguiçadeira de pano",
@@ -330,6 +341,81 @@
       "qtd": 20,
       "descricao": "Tapete estilo zoo para quarto",
       "imagem": "IMG/quarto criança/tapete zoo.png"
+
+    },
+    
+        {
+      "id":60 ,
+      "nome": "Armário de escritório",
+      "preco": 1500.00,
+      "qtd": 5,
+      "descricao": "armário ",
+      "imagem": "IMG/ArmariodeEscritorio.png"
+    },
+    {
+      "id":61,
+      "nome": "Cadeira confortável",
+      "preco": 550.00,
+      "qtd": 15,
+      "descricao": "cadeira confortável para trabalho e reuniões",
+      "imagem": "IMG/CadeiraConfortaveldeEscritorio.png"
+    },
+    {
+      "id": 62,
+      "nome": "Cadeira básica",
+      "preco": 350.00,
+      "qtd": 10,
+      "descricao": "cadeira básica de escritório. Simples e confortável",
+      "imagem": "IMG/CadeiradeEscritorioBasica.png"
+    },
+    {
+      "id": 63,
+      "nome": " Conjunto de cadeiras",
+      "preco": 700.00,
+      "qtd": 10,
+      "descricao": "conjunto de cadeiras básicas para empresa",
+      "imagem": "IMG/ConjuntodeCadeirasparaFuncionarios.png"
+    },
+    {
+      "id": 64,
+      "nome": "Luminária",
+      "preco": 200.00,
+      "qtd": 20,
+      "descricao": "luminária para escritório",
+      "imagem": "IMG/LuminariaparaEscritorio.png"
+    },
+    {
+      "id": 65,
+      "nome": "Mesa simples",
+      "preco": 250.00,
+      "qtd": 10,
+      "descricao": "Mesa simples para ambiente de trabalho",
+      "imagem": "IMG/MesaSimplesdeEscritorio.png"
+    },
+    {
+      "id": 66,
+      "nome": "Mesa para funcionários",
+      "preco": 950.00,
+      "qtd": 10,
+      "descricao": "Mesa para sala de funcionários",
+      "imagem": "IMG/MesaFuncionarios.png"
+    },
+    {
+      "id": 67,
+      "nome": "Cadeira plus",
+      "preco": 2050.00,
+      "qtd": 5,
+      "descricao": "Cadeira super confortável e elegante para um escritório chique e relaxante.",
+      "imagem": "IMG/CadeiraChique.png"
+    },
+    {
+      "id": 68,
+      "nome": "Móvel com gavetas",
+      "preco": 1200.00,
+      "qtd": 10,
+      "descricao": "Móvel com gavetas para escritório",
+      "imagem": "IMG/MovelChique.png"
     }
+    
   ]
 }

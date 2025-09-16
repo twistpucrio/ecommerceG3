@@ -40,3 +40,5 @@ function adicionarAoCarrinho(nome, id, preco,imagem) {
 }
 
 window.addEventListener("load", carregarDados);
+
+
