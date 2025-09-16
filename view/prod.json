@@ -97,6 +97,239 @@
       "qtd": 15,
       "descricao": "Sofá cômodo e espaçoso de pano na cor azul marinho",
       "imagem": "IMG/jardim/sofa-azul-marinho.png"
+    },
+        {
+      "id": 30,
+      "nome": "Armario Moderno",
+      "preco": 1999.99,
+      "qtd": 15,
+      "descricao": "Armário moderno e espaçoso para quarto",
+      "imagem": "IMG/quarto adulto/armario moderno.png"
+    },
+      {
+      "id": 31,
+      "nome": "Armario Vitoriano",
+      "preco": 2999.99,
+      "qtd": 15,
+      "descricao": "Armário vitoriano e espaçoso para quarto",
+      "imagem": "IMG/quarto adulto/armario vitoriano.png"
+    },
+      {
+      "id": 32,
+      "nome": "Cama Moderna",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cama moderna e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cama moderna.png"
+    },
+      {
+      "id": 33,
+      "nome": "Cama Praiana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cama praiana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cama praian.png"
+    },
+         {
+      "id": 34,
+      "nome": "Cama Vitoriana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cama vitoriana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cama vitoriana.png"
+    },
+         {
+      "id": 35,
+      "nome": "Cortina Moderna",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cortina moderna e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cortinas moderno.png"
+    }  ,
+      {
+      "id": 36,
+      "nome": "Cortina Praiana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cortina praiana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cortinas praiano.png"
+    },
+      {
+      "id": 37,
+      "nome": "Cortina Vitoriana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Cortina vitoriana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/cortinas vitoriana.png"
+    },
+       {
+      "id": 38,
+      "nome": "Estante Moderna",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Estante moderna e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/estante moderna.png"
+    } ,
+
+{
+      "id": 39,
+      "nome": "Estante Praiana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Estante praiana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/estante praiano.png"
+    },        
+      
+{
+      "id": 40,
+      "nome": "Estante Vitoriana",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Estante vitoriana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/estante vitoriana.png"
+    },
+{
+      "id": 42,
+      "nome": "Mesa de Cabeceira Moderna",
+      "preco": 1000.99,
+      "qtd": 15,
+      "descricao": "Mesa de cabeceira moderna e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/mesa de cabeceira moderna.png"
+    } ,{
+      "id": 43,
+      "nome": "Mesa de Cabeceira praiana",
+      "preco": 1000.99,
+      "qtd": 20,
+      "descricao": "Mesa de cabeceira praiana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/mesa de cabeceira praiana.png"
+    }, 
+    {
+      "id": 44,
+      "nome": "Mesa de Cabeceira vitoriana",
+      "preco": 1000.99,
+      "qtd": 20,
+      "descricao": "Mesa de cabeceira vitoriana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/mesa de cabeceira vitoriana.png"
+    }
+      ,{
+      "id": 45,
+      "nome": "Mesa de Escritorio Moderna",
+      "preco": 1000.99,
+      "qtd": 20,
+      "descricao": "Mesa de escritorio moderna e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/mesa escritório moderno.png"
+    }
+    ,{
+      "id": 46,
+      "nome": "Mesa de Escritorio Vitoriana",
+      "preco": 1000.99,
+      "qtd": 20,
+      "descricao": "Mesa de escritorio vitoriana e espaçosa para quarto",
+      "imagem": "IMG/quarto adulto/mesa escritório vitoriano.png"
+    },
+    {
+      "id": 47,
+      "nome": "Tapete Moderno",
+      "preco": 799.99,
+      "qtd": 20,
+      "descricao": "Tapete moderno e espaçoso para quarto",
+      "imagem": "IMG/quarto adulto/tapete moderno.png"
+    },
+      {
+      "id": 48,
+      "nome": "Tapete praiano",
+      "preco": 699.99,
+      "qtd": 20,
+      "descricao": "Tapete praiano e espaçoso para quarto",
+      "imagem": "IMG/quarto adulto/tapete praiano.png"
+    },
+    {
+      "id": 49,
+      "nome": "Tapete vitoriano",
+      "preco": 500.99,
+      "qtd": 20,
+      "descricao": "Tapete vitoriano e espaçoso para quarto",
+      "imagem": "IMG/quarto adulto/tapete vitoriano.png"
+    },
+     {
+      "id": 50,
+      "nome": "Cama kawaii",
+      "preco": 1500.99,
+      "qtd": 20,
+      "descricao": "Cama kawaii e espaçosa para quarto",
+      "imagem": "IMG/quarto criança/cama kawaii.png"
+    },
+      {
+      "id": 51,
+      "nome": "Comoda kawaii",
+      "preco": 700.99,
+      "qtd": 20,
+      "descricao": "Cômoda kawaii para quarto",
+      "imagem": "IMG/quarto criança/cômoda kawaii.png"
+    },
+      {
+      "id": 52,
+      "nome": "Comoda zoo",
+      "preco": 700.99,
+      "qtd": 20,
+      "descricao": "Cômoda estilo zoo para quarto",
+      "imagem": "IMG/quarto criança/cômoda zoo.png"
+    },
+            {
+      "id": 53,
+      "nome": "Estante kawaii",
+      "preco": 900.99,
+      "qtd": 20,
+      "descricao": "Estante estilo kawaii para quarto",
+      "imagem": "IMG/quarto criança/estante kawaii.png"
+    },
+        {
+      "id": 54,
+      "nome": "Luminaria kawaii",
+      "preco": 500.99,
+      "qtd": 20,
+      "descricao": "Luminária estilo kawaii para quarto",
+      "imagem": "IMG/quarto criança/luminária kawaii.png"
+    },
+        {
+      "id": 55,
+      "nome": "Luminaria zoo",
+      "preco": 500.99,
+      "qtd": 20,
+      "descricao": "Luminária estilo zoo para quarto",
+      "imagem": "IMG/quarto criança/luminária zoo.png"
+    },
+        {
+      "id": 56,
+      "nome": "Mesa recreativa kawaii",
+      "preco": 800.99,
+      "qtd": 20,
+      "descricao": "Mesa recreativa estilo kawaii para quarto",
+      "imagem": "IMG/quarto criança/mesa recreativa kawaii.png"
+    },
+    {
+      "id": 57,
+      "nome": "Mesa recreativa zoo",
+      "preco": 800.99,
+      "qtd": 20,
+      "descricao": "Mesa recreativa estilo zoo para quarto",
+      "imagem": "IMG/quarto criança/mesa recreativa zoo.png"
+    },
+    {
+      "id": 58,
+      "nome": "Tapete kawaii",
+      "preco": 500.99,
+      "qtd": 20,
+      "descricao": "Tapete estilo kawaii para quarto",
+      "imagem": "IMG/quarto criança/tapete kawaii.png"
+    },
+    {
+      "id": 59,
+      "nome": "Tapete zoo",
+      "preco": 500.99,
+      "qtd": 20,
+      "descricao": "Tapete estilo zoo para quarto",
+      "imagem": "IMG/quarto criança/tapete zoo.png"
     }
   ]
 }
