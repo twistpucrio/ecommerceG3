@@ -421,3 +421,96 @@ h1.carrinho{
   background-color: #5a1f2c;
   transform: translateY(-2px);
 }
+
+
+
+
+
+body {
+  background-color: #3b0d16; 
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: black;
+}
+
+
+#listaFavoritos {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+h1.fav {
+  text-align: center;
+  color:black;
+  margin-bottom: 30px;
+}
+
+
+.item-favoritos {
+  background: white;
+  border-radius: 12px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+
+.img-favoritos {
+  width: 140px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+
+.item-favoritos p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.item-favoritos p + p {
+  font-weight: 500;
+  margin-top: 6px;
+  color: #555;
+}
+
+
+.item-favoritos button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #ef4444;
+  font-size: 16px;
+}
+
+
+.item-favoritos button svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+
+.item-favoritos button:hover svg {
+  fill: #a00;
+}
+
+#fav-container {
+  background: white;
+  max-width: 850px;
+  margin: 40px auto;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  color: black;}
