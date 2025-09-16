@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home</title>
     <link rel="stylesheet" href= "styles/estilo.css">
+    <script src="grid-pagina-produtos.js" defer></script>
+
 </head>
 <body>
     
@@ -19,22 +21,13 @@
         <button id="search-button">Buscar</button>
     </div>
 
-    <section id="secSala">  
+    <div id="produtos-container">
+        <div id="grid" class="grid"></div>
+    </div>
 
- 
-        <a href=" "> <img id="armaarioEs" class="sala" src="IMG/ArmariodeEscritorio.png" alt="armario"/> </a>
-        <a href=""> <img id="cadeiraconfyEs" class="sala" src="IMG/CadeiraConfortaveldeEscritorio.png" alt="cadeira"/></a>
-        <a href=""> <img id="cadeiraEs"  class="sala" src="IMG/CadeiradeEscritorioBasica.png" alt="cadeira"/> </a>
-        <a href=""> <img id="conjuntocadeirasEs"  class="sala" src="IMG/ConjuntodeCadeirasparaFuncionarios.png" alt="conjuntocadeiras"/> </a>
-        <a href=""> <img id="luminariaEs"  class="sala" src="IMG/LuminariaparaEscritorio.png" alt="luminaria"/> </a>
-        <a href=""> <img id="mesaEs"  class="sala" src="IMG/MesadeEscritórioemL.png" alt="mesa"/> </a>
-        <a href=""> <img id="mesSimplesEs"  class="sala" src="IMG/MesaSimplesdeEscritorio.png" alt="mesasimples"/> </a>
-        <a href=""> <img id="sofaverde"  class="sala" src="IMG/sofaVerde.png" alt="sofaVerde"/> </a>
-        <a href=""> <img id="estante"  class="sala" src="IMG/estanteSala.png" alt="estante"/> </a>
-        <a href=""> <img id="comoda"  class="sala" src="IMG/comoda.png" alt="comoda"/> </a>
-
-    </section>
-    
+    <script>
+        let pagina = "escritorio";
+    </script>
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
