@@ -42,3 +42,32 @@ function adicionarAoCarrinho(nome, id, preco,imagem) {
 window.addEventListener("load", carregarDados);
 
 
+
+function adicionarAFavoritos(nome, id, preco,imagem) {
+  let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+  let produto = {
+    id:id,
+    nome: nome,
+    imagem: imagem,
+    preco: preco
+  };
+
+  favoritos.push(produto);
+  localStorage.setItem("favoritos", JSON.stringify(favoritos));
+
+  alert(nome + " foi adicionado a lista de favoritos!");
+}
+document.addEventListener('click', (e) => {
+
+  
+  const btn = e.target.closest('.btn-favoritos');
+  if (!btn) return;
+
+  const nome   = btn.dataset.nome;
+  const id     = Number(btn.dataset.id);
+  const preco  = Number(btn.dataset.preco);
+  const imagem = btn.dataset.imagem;
+
+  adicionarAFavoritos(nome, id, preco, imagem);
+});

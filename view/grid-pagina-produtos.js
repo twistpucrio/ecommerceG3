@@ -47,10 +47,19 @@ fetch('prod.json')
         adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
       });
 
+      const buttonFav = document.createElement('button');
+      buttonFav.className = 'btn-add-fav';
+      buttonFav.textContent = 'Adicionar a favoritos';
+
+      buttonFav.addEventListener('click', () => {
+        adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
+      });
+
       card.appendChild(img);
       card.appendChild(info);
       grid.appendChild(card);
       card.appendChild(button);
+      card.appendChild(buttonFav);
     });
   })
   .catch(error => {

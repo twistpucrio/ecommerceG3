@@ -339,6 +339,20 @@ button.btn-carrinho:hover{
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
 }
+.btn-add-fav{
+    display: block;
+  width: 90%;
+  margin: 10px auto 15px auto;
+  padding: 10px;
+  background-color: #fd3dad; /* cor do botão */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
 
 .btn-add-carrinho:hover {
   background-color: #ff4c3b;
