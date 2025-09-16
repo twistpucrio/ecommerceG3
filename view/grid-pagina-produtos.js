@@ -40,7 +40,7 @@ fetch('prod.json')
       info.textContent = `${p.nome} - (R$ ${p.preco})`;
 
       const button = document.createElement('button');
-      button.className = 'btn-carrinho';
+      button.className = 'btn-add-carrinho';
       button.textContent = 'Adicionar ao carrinho';
 
       button.addEventListener('click', () => {

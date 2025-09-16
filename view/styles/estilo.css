@@ -271,12 +271,12 @@ button.btn-carrinho{
   aspect-ratio: 4 / 3;     
   height: 400px;             
   object-fit: contain;       
-  background: #3b0d16;          
+  background: white;          
   border-radius: 10px;
 }
 
  
-.nome-produto{ color:#fff; font-weight:600; margin:4px 0 0; }
+.nome-produto{ color:#3b0d16; font-weight:600; margin:4px 0 0; }
 .preco-produto{ color:#ffcc00; margin:0 0 6px; }
 .btn-carrinho{ width:100%; padding:10px; border:none; border-radius:8px; background:#28a745; color:#fff; cursor:pointer; }
 .btn-carrinho:hover{ background:#218838; }
@@ -293,6 +293,8 @@ button.btn-carrinho:hover{
   left: 700px;
   margin-top: 60px;
   margin-bottom: 60px;
+  overflow-y: auto;
+  color: #3b0d16;
  }
 
 .grid{ 
@@ -302,7 +304,7 @@ button.btn-carrinho:hover{
 }
 
 .card{ 
-  background:#3b0d16;
+  background: white;
   border-radius:5px;
   overflow:hidden;
   margin: 30px;
@@ -318,11 +320,12 @@ button.btn-carrinho:hover{
   padding:10px;
   font-size:18px;
   font-family: 'secundaria';
-  color: white;
+  color:#3b0d16;
   text-align: center;
+  font-weight: bold;
 }
 
-.btn-carrinho {
+.btn-add-carrinho {
   display: block;
   width: 90%;
   margin: 10px auto 15px auto;
@@ -337,7 +340,7 @@ button.btn-carrinho:hover{
   transition: background-color 0.2s, transform 0.2s;
 }
 
-.btn-carrinho:hover {
+.btn-add-carrinho:hover {
   background-color: #ff4c3b;
   transform: translateY(-2px);
 }
