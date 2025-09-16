@@ -9,8 +9,8 @@ fetch('prod.json')
     const produtos = data.produtos;
     const filtradosSala = produtos.filter(p => p.id >= 1 && p.id <= 10);
     const filtradosJardim = produtos.filter(p => p.id >= 11 && p.id <= 23);
-    const filtradosTodos = produtos.filter(p => p.id >= 1 && p.id <= 23);
-    const filtradosQuarto = produtos.filter(p => p.id >= 40 && p.id <= 55);
+    const filtradosTodos = produtos.filter(p => p.id >= 1 && p.id <= 59);
+    const filtradosQuarto = produtos.filter(p => p.id >= 30 && p.id <= 59);
     const filtradosEscritorio = produtos.filter(p => p.id >= 110 && p.id <= 118);
     let filtrados = [];
 
