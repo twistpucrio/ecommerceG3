@@ -7,7 +7,16 @@ fetch('prod.json')
   })
   .then(data => {
     const produtos = data.produtos;
-    const filtrados = produtos.filter(p => p.id >= 11 && p.id <= 23);
+    const filtradosSala = produtos.filter(p => p.id >= 1 && p.id <= 10);
+    const filtradosJardim = produtos.filter(p => p.id >= 11 && p.id <= 23);
+
+    let filtrados = [];
+
+    if (pagina === "jardim") {
+      filtrados = filtradosJardim;
+    } else if (pagina === "sala") {
+      filtrados = filtradosSala;
+    }
 
     filtrados.forEach(p => {
       const card = document.createElement('div');
@@ -22,7 +31,7 @@ fetch('prod.json')
       info.textContent = `${p.nome} - (R$ ${p.preco})`;
 
       const button = document.createElement('button');
-      button.className = 'btn-carrinho';
+      button.className = 'btn-add-carrinho';
       button.textContent = 'Adicionar ao carrinho';
 
       button.addEventListener('click', () => {
