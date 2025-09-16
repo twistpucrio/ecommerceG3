@@ -344,3 +344,30 @@ button.btn-carrinho:hover{
   background-color: #ff4c3b;
   transform: translateY(-2px);
 }
+
+.img-carrinho {
+  width: 600px;
+  height: 700px;
+  display: block;
+  margin: 0 auto;   /* centraliza horizontalmente */
+  object-fit: contain; /* opcional, para não esticar */
+}
+.item-carrinho{
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-family: "primaria";
+}
+
+h1.carrinho{
+  color:white;
+  text-align: center;
+  font-size: 50px;
+  font-family: "primaria";
+}
+
+.btn-remover{
+  border:0; padding:8px 12px; border-radius:8px; cursor:pointer;
+  background:#ef4444; color:#fff; font-weight:700;
+}
+.btn-remover:hover{ filter:brightness(1.05); }
