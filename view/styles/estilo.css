@@ -112,11 +112,12 @@ img.categoria {
   border-radius: 10px;
 }
 
-#quadrado-branco h1{
+#quadrado-branco h1, #dados-container h1{
   color: #3b0d16;
   text-align: center;
   font-family: 'principal';
   font-size: 35pt;
+  margin-bottom: 50px;
 }
 
 #logo-vinho{
@@ -343,4 +344,57 @@ button.btn-carrinho:hover{
 .btn-add-carrinho:hover {
   background-color: #ff4c3b;
   transform: translateY(-2px);
+}
+
+/*Cadastro*/
+
+#dados-container{
+  width: 50%;
+  height: 1250px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.form-cadastro label{
+  font-family: 'secundaria';
+  font-size: 20pt;
+  color: #3b0d16;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.form-cadastro input{
+  background-color: #3b0d16;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-left: 100px;
+  margin-top: 20px;
+  display: block;
+  width: 75%;
+  height: 60px;
+  color: white;
+  font-family: 'secundaria';
+  padding-left: 15px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.form-cadastro input::placeholder {
+  color: white;
+  font-family: 'secundaria';
+  font-size: 13pt;
+}
+
+.form-cadastro button{
+  background-color: #3b0d16;
+  border-radius: 5px;
+  font-family: 'secundaria';
+  font-size: 13pt;
+  color: white;
+  padding: 20px;
+  height: 60px;
+  position: relative;
+  left: 725px;
+  border: none;
 }

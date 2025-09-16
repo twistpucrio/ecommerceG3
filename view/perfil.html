@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Cadastro</title>
     <link rel="stylesheet" href= "styles/estilo.css">
 </head>
 <body>
@@ -13,12 +13,44 @@
     <a href="perfil.html"> <img id="perfil" class="icon" src="IMG/perfil.png" alt="perfil"/> </a>
     <a href="index.html">  <img id="logo" class="logo" src="IMG/Screenshot 2025-09-11 160009.png" alt="ML"><img></a>
     <a href="index.html">  <img id="home" class="icon" src="IMG/home.png" alt="home"/> </a>
-       <br/><br/>
 
-    
+    <section id="principal">
+        <div id="dados-container">
+            <br/><br/>
+            <form class="form-cadastro">
+                <h1>Cadastro</h1>
+
+                <label for="nome">Nome completo:</label>
+                <input class="campo-info" type="text" id="nome" name="nome" placeholder="Digite aqui" required>
+
+                <label for="email">E-mail:</label>
+                <input class="campo-info" type="email" id="email" name="email" placeholder="Digite aqui" required>
+
+                <label for="cep">CEP:</label>
+                <input class="campo-info" type="text" id="cep" name="cep" placeholder="*****-***" required>
+
+                <label for="end">Endereço:</label>
+                <input class="campo-info" type="text" id="end" name="end" placeholder="Digite aqui" required>
+
+                <label for="comp">Complemento:</label>
+                <input class="campo-info" type="text" id="comp" name="comp" placeholder="Digite aqui" required>
+
+                <label for="senha">Senha:</label>
+                <input class="campo-info" type="password" id="senha" name="senha" placeholder="Digite aqui" required>
+
+                <label for="confirmar-senha">Confirmar senha:</label>
+                <input class="campo-info" type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Digite aqui" required>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </div>
+    </section>
+
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
     </footer>
+
 </body>
 </html>
