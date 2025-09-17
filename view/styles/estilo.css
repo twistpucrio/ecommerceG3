@@ -414,17 +414,21 @@ button.btn-carrinho:hover{
 }
 
 .img-carrinho {
-  width: 600px;
-  height: 700px;
-  display: block;
-  margin: 0 auto;   /* centraliza horizontalmente */
-  object-fit: contain; /* opcional, para não esticar */
+   width: 140px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+  flex-shrink: 0;
 }
 .item-carrinho{
-  color: white;
-  text-align: center;
-  font-size: 25px;
-  font-family: "primaria";
+   background: white;
+  border-radius: 12px;
+  padding: 15px 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
 }
 
 h1.carrinho{
@@ -567,3 +571,49 @@ h1.fav {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   color: black;}
 
+.item-carrinho p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  flex-grow: 1;
+}
+
+.item-carrinho p + p {
+  font-weight: 500;
+  margin-top: 6px;
+  color: #555;
+}
+
+
+.item-carrinho button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: #ef4444;
+  font-size: 16px;
+}
+
+
+.item-carrinho button svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+  transition: fill 0.3s ease;
+}
+
+.item-carrinho button:hover svg {
+  fill: #a00;
+}
+
+#carrinho-container {
+  background: white;
+  max-width: 850px;
+  margin: 40px auto;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  color: black;}
