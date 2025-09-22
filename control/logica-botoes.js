@@ -1,4 +1,5 @@
-//barra de pesquisa
+// BARRA DE PESQUISA:
+
 document.getElementById("search-button").addEventListener("click", function() {
   const query = document.getElementById("search-input").value.trim();
   if (query) {
@@ -9,7 +10,7 @@ document.getElementById("search-button").addEventListener("click", function() {
   }
 });
 
-
+// CARRINHO:
  
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-carrinho');
@@ -22,42 +23,9 @@ document.addEventListener('click', (e) => {
 
   adicionarAoCarrinho(nome, id, preco, imagem);
 });
-// Função para salvar no carrinho
-function adicionarAoCarrinho(nome, id, preco,imagem) {
-  let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-  let produto = {
-    id:id,
-    nome: nome,
-    imagem: imagem,
-    preco: preco
-  };
+// FAVORITOS:
 
-  carrinho.push(produto);
-  localStorage.setItem("carrinho", JSON.stringify(carrinho));
-
-  alert(nome + " foi adicionado ao carrinho!");
-}
-
-window.addEventListener("load", carregarDados);
-
-
-
-function adicionarAFavoritos(nome, id, preco,imagem) {
-  let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
-
-  let produto = {
-    id:id,
-    nome: nome,
-    imagem: imagem,
-    preco: preco
-  };
-
-  favoritos.push(produto);
-  localStorage.setItem("favoritos", JSON.stringify(favoritos));
-
-  alert(nome + " foi adicionado a lista de favoritos!");
-}
 document.addEventListener('click', (e) => {
 
   
@@ -71,3 +39,5 @@ document.addEventListener('click', (e) => {
 
   adicionarAFavoritos(nome, id, preco, imagem);
 });
+
+window.addEventListener("load", carregarDados);
