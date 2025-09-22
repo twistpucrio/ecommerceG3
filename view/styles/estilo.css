@@ -617,3 +617,35 @@ h1.fav {
   padding: 30px 40px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   color: black;}
+
+ 
+.total-container {
+  display: flex;
+  justify-content: space-between; /* separa total e botão */
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+#total {
+  font-size: 18pt;
+  font-weight: bold;
+  font-family: 'principal';
+}
+
+#finalizar {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 18pt;
+  font-family: 'principal';
+  transition: background 0.2s ease;
+}
+
+#finalizar:hover {
+  background-color: green;
+}
