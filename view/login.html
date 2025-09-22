@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos</title>
+    <title>home</title>
     <link rel="stylesheet" href= "styles/estilo.css">
-    <script src="../control/renderiza-grid-produtos.js" defer></script>
-    <script src="../model/funcoes.js" defer></script>
+    <link rel="stylesheet" href= "styles/cadastro.css">
+    <link rel="stylesheet" href= "styles/login.css">
 </head>
 <body>
-    
     <a href="carrinho.html"> <img id="cart" class="icon" src="IMG/carrinho.png" alt="cart"/></a>
     <a href="favoritos.html"> <img id="favorite" class="icon" src="IMG/favorites.png" alt="favorite"/>  </a>
     <a href="login.html"> <img id="perfil" class="icon" src="IMG/perfil.png" alt="perfil"/> </a>
@@ -17,17 +16,24 @@
     <a href="index.html">  <img id="home" class="icon" src="IMG/home.png" alt="home"/> </a>
        <br/><br/>
 
-       <div id="produtos-container">
-        <div id="grid" class="grid"></div>
-    </div>
+<div id="dados-container">
+  <h1>Login</h1>
+  <form class="form-cadastro">
+    <label for="email">E-mail</label>
+    <input type="email" id="email" placeholder="Digite seu e-mail">
 
-    <script>
-        let pagina = "todosProdutos";
-    </script>
-    
-    <footer id="rodape">
-        <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
-        <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
-    </footer>
+    <label for="senha">Senha</label>
+    <input type="password" id="senha" placeholder="Digite sua senha">
+
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p style="text-align:center; margin-top:20px; font-family:'secundaria'; font-size:14pt; color:#3b0d16;">
+    Não tem conta? <a href="perfil.html" style="color:#8d4654; font-weight:bold; text-decoration:none;">Cadastre-se</a>
+  </p>
+</div>
+    </main>
+
 </body>
+
 </html>
