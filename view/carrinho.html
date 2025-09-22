@@ -27,64 +27,77 @@
 </div>
 </div>
  
-
-
-
 <script>
   function renderCarrinho() {
-    const div = document.getElementById('listaCarrinho');
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  const div = document.getElementById('listaCarrinho');
+  const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    if (carrinho.length === 0) {
-      div.innerHTML = `
-  <div class="msg-vazio">
-    <p>Oops... parece que seu carrinho está vazio!</p>
-    <a href="index.html" class="btn-voltar">Ver produtos</a>
-  </div>
-`;
- document.getElementById('total').textContent = "Total: R$ 0,00";
- 
-  const btn = document.getElementById('finalizar');
-  if (btn) btn.style.display = 'none';
-  const tc = document.querySelector('.total-container');
-if (tc) tc.style.display = 'none';
-      return;
-    }
-
-    // cada item vem com um botão Remover
-    div.innerHTML = carrinho.map((item, i) => `
-      <div class="item-carrinho">
-        <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
-        <p>${item.nome} - R$ ${item.preco}</p>
-        <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
-          Remover
-        </button>
+  if (carrinho.length === 0) {
+    div.innerHTML = `
+      <div class="msg-vazio">
+        <p>Oops... parece que seu carrinho está vazio!</p>
+        <a href="index.html" class="btn-voltar">Ver produtos</a>
       </div>
-    `).join('');
-    const total = carrinho.reduce((soma, item) => soma + Number(item.preco || 0), 0);
-document.getElementById('total').textContent = "Total: R$ " + total.toFixed(2);
+    `;
+    document.getElementById('total').textContent = "Total: R$ 0,00";
+
+    const btn = document.getElementById('finalizar');
+    if (btn) btn.style.display = 'none';
+    const tc = document.querySelector('.total-container');
+    if (tc) tc.style.display = 'none';
+    return;
   }
+
+  div.innerHTML = carrinho.map((item, i) => `
+    <div class="item-carrinho">
+      <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
+      <p>${item.nome} - R$ ${item.preco} x ${item.quantidade || 1}</p>
+      <button class="btn-diminuir" data-index="${i}">-</button>
+      <button class="btn-aumentar" data-index="${i}">+</button>
+      <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
+        Remover
+      </button>
+    </div>
+  `).join('');
+
+  const total = carrinho.reduce((soma, item) => soma + Number(item.preco || 0) * (item.quantidade || 1), 0);
+  document.getElementById('total').textContent = "Total: R$ " + total.toFixed(2);
+}
  
   // chama ao carregar a página
   window.addEventListener('load', renderCarrinho);
 </script>
 
 <script>
-  // clique em qualquer botão .btn-remover dentro do documento
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.btn-remover');
-    if (!btn) return;
+document.addEventListener('click', (e) => {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-    const idx = Number(btn.dataset.index);
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+  // Aumentar quantidade
+  if (e.target.classList.contains('btn-aumentar')) {
+    const idx = Number(e.target.dataset.index);
+    carrinho[idx].quantidade = (carrinho[idx].quantidade || 1) + 1;
+  }
 
-    // remove 1 item na posição idx
+  // Diminuir quantidade
+  if (e.target.classList.contains('btn-diminuir')) {
+    const idx = Number(e.target.dataset.index);
+    if ((carrinho[idx].quantidade || 1) > 1) {
+      carrinho[idx].quantidade -= 1;
+    } else {
+      // Se quantidade chega a 0, remove do carrinho
+      carrinho.splice(idx, 1);
+    }
+  }
+
+  // Remover completamente
+  if (e.target.classList.contains('btn-remover')) {
+    const idx = Number(e.target.dataset.index);
     carrinho.splice(idx, 1);
-    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  }
 
-    // re-renderiza a lista
-    renderCarrinho();
-  });
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  renderCarrinho();
+});
 </script>
        
 <script>
