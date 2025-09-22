@@ -3,83 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Carrinho</title>
     <link rel="stylesheet" href= "styles/estilo.css">
+    <script src="../model/funcoes.js" defer></script>
+    <script src="../control/logica-botoes.js" defer></script>
 </head>
 <body>
     
-    <a href="carrinho.html"> <img id="cart" class="icon" src="IMG/carrinho.png" alt="cart"/></a>
-    <a href="favoritos.html"> <img id="favorite" class="icon" src="IMG/favorites.png" alt="favorite"/>  </a>
-    <a href="perfil.html"> <img id="perfil" class="icon" src="IMG/perfil.png" alt="perfil"/> </a>
-    <a href="index.html">  <img id="logo" class="logo" src="IMG/Screenshot 2025-09-11 160009.png" alt="ML"><img></a>
-    <a href="index.html">  <img id="home" class="icon" src="IMG/home.png" alt="home"/> </a>
+    <div id="topbar">
+        <a href="index.html">  <img id="logo" class="logo" src="IMG/logo.png" alt="ML"><img></a>
+        <div id="icones-pequenos">
+            <a href="perfil.html"> <img id="perfil" class="icon" src="IMG/perfil.png" alt="perfil"/> </a>
+            <a href="favoritos.html"> <img id="favorite" class="icon" src="IMG/favorites.png" alt="favorite"/>  </a>
+            <a href="carrinho.html"> <img id="cart" class="icon" src="IMG/carrinho.png" alt="cart"/></a>
+        </div>
+    </div>
        <br/><br/>
    
-       <!--tentando adicionar itens -->
      <h1 class="carrinho">Seu Carrinho</h1>
-     <!--  
-  <div id="listaCarrinho"></div>
 
-  <script>
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    let div = document.getElementById("listaCarrinho");
-
-    if (carrinho.length === 0) {
-      div.innerHTML = "<p>Seu carrinho está vazio.</p>";
-    } else {
-      carrinho.forEach(item => {
-        div.innerHTML += `
-          <div class="item-carrinho">
-            <img class="img-carrinho" src="${item.imagem}" width="100"/>
-            <p>${item.nome} - R$ ${item.preco}</p>
-          </div>
-        `;
-        console.log(item.imagem);
-        console.log(item.nome)
-      });
-    }
-  </script>
-
-  -->
-
-  
-
-          
  <div id="carrinho-container">
   <h1 class="fav">Seu Carrinho</h1>
   <div id="listaCarrinho"></div>
 </div>
-
-<script>
-  function renderCarrinho() {
-    const div = document.getElementById('listaCarrinho');
-    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-
-    if (carrinho.length === 0) {
-      div.innerHTML = `
-  <div class="msg-vazio">
-    <p>Oops... parece que seu carrinho está vazio!</p>
-    <a href="index.html" class="btn-voltar">Ver produtos</a>
-  </div>
-`;
-      return;
-    }
-
-    // cada item vem com um botão Remover
-    div.innerHTML = carrinho.map((item, i) => `
-      <div class="item-carrinho">
-        <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
-        <p>${item.nome} - R$ ${item.preco}</p>
-        <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
-          Remover
-        </button>
-      </div>
-    `).join('');
-  }
-
-  // chama ao carregar a página
-  window.addEventListener('load', renderCarrinho);
-</script>
 
 <script>
   // clique em qualquer botão .btn-remover dentro do documento

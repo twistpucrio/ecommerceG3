@@ -1,6 +1,8 @@
+// -----------------------------------------------------------------------------------------
 // BARRA DE PESQUISA:
+// -----------------------------------------------------------------------------------------
 
-document.getElementById("search-button").addEventListener("click", function() {
+/*document.getElementById("search-button").addEventListener("click", function() {
   const query = document.getElementById("search-input").value.trim();
   if (query) {
     // Exemplo: redirecionar para uma página de resultados
@@ -8,10 +10,13 @@ document.getElementById("search-button").addEventListener("click", function() {
   } else {
     alert("Digite algo para pesquisar!");
   }
-});
+});*/
 
+// -----------------------------------------------------------------------------------------
 // CARRINHO:
- 
+// -----------------------------------------------------------------------------------------
+
+//Adicionar ao carrinho
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-carrinho');
   if (!btn) return;
@@ -24,7 +29,9 @@ document.addEventListener('click', (e) => {
   adicionarAoCarrinho(nome, id, preco, imagem);
 });
 
+// -----------------------------------------------------------------------------------------
 // FAVORITOS:
+// -----------------------------------------------------------------------------------------
 
 document.addEventListener('click', (e) => {
 
@@ -39,5 +46,3 @@ document.addEventListener('click', (e) => {
 
   adicionarAFavoritos(nome, id, preco, imagem);
 });
-
-window.addEventListener("load", carregarDados);
