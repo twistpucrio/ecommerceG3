@@ -17,38 +17,18 @@
    
        <!--tentando adicionar itens -->
      <h1 class="carrinho">Seu Carrinho</h1>
-     <!--  
-  <div id="listaCarrinho"></div>
-
-  <script>
-    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
-    let div = document.getElementById("listaCarrinho");
-
-    if (carrinho.length === 0) {
-      div.innerHTML = "<p>Seu carrinho está vazio.</p>";
-    } else {
-      carrinho.forEach(item => {
-        div.innerHTML += `
-          <div class="item-carrinho">
-            <img class="img-carrinho" src="${item.imagem}" width="100"/>
-            <p>${item.nome} - R$ ${item.preco}</p>
-          </div>
-        `;
-        console.log(item.imagem);
-        console.log(item.nome)
-      });
-    }
-  </script>
-
-  -->
-
-  
-
           
  <div id="carrinho-container">
   <h1 class="fav">Seu Carrinho</h1>
   <div id="listaCarrinho"></div>
+   <div class="total-container">
+  <p id="total"></p>
+  <button id="finalizar">Finalizar Compra</button>
 </div>
+</div>
+ 
+
+
 
 <script>
   function renderCarrinho() {
@@ -62,6 +42,12 @@
     <a href="index.html" class="btn-voltar">Ver produtos</a>
   </div>
 `;
+ document.getElementById('total').textContent = "Total: R$ 0,00";
+ 
+  const btn = document.getElementById('finalizar');
+  if (btn) btn.style.display = 'none';
+  const tc = document.querySelector('.total-container');
+if (tc) tc.style.display = 'none';
       return;
     }
 
@@ -75,8 +61,10 @@
         </button>
       </div>
     `).join('');
+    const total = carrinho.reduce((soma, item) => soma + Number(item.preco || 0), 0);
+document.getElementById('total').textContent = "Total: R$ " + total.toFixed(2);
   }
-
+ 
   // chama ao carregar a página
   window.addEventListener('load', renderCarrinho);
 </script>
@@ -99,6 +87,17 @@
   });
 </script>
        
+<script>
+  function atualizarTotal() {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    let total = carrinho.reduce((soma, item) => soma + Number(item.preco || 0), 0);
+    document.getElementById('total').textContent = "Total: R$ " + total.toFixed(2);
+  }
+
+  // Chama ao carregar
+  window.addEventListener('load', atualizarTotal);
+</script>
+ 
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>

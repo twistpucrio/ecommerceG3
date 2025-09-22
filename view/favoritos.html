@@ -33,7 +33,12 @@
     const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
 
     if (favoritos.length === 0) {
-      div.innerHTML = '<p>Sua lista de favoritos esta vazia.</p>';
+      div.innerHTML = `
+  <div class="msg-vazio">
+    <p>Oops... parece que sua lista de favoritos está vazia!</p>
+    <a href="index.html" class="btn-voltar">Ver produtos</a>
+  </div>
+`;
       return;
     }
 
