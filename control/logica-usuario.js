@@ -23,27 +23,64 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // CADASTRO — UM único submit handler
-  const form = document.querySelector(".form-cadastro");
-  if (form) {
-    form.addEventListener("submit", (e) => {
-      e.preventDefault();
+  // CADASTRO — submit handler unificado
+  const formCadastro = document.querySelector(".form-cadastro");
+  if (formCadastro) {
+    formCadastro.addEventListener("submit", (event) => {
+      event.preventDefault();
 
-      const senha = document.getElementById("senha").value;
-      const confirmar = document.getElementById("confirmar-senha").value;
+      const formData = new FormData(formCadastro);
+      const dadosUsuario = Object.fromEntries(formData); // { nome, email, senha, confirmar-senha }
 
-      // valida antes de salvar
-      if (senha !== confirmar) {
+      // Valida confirmação de senha
+      if (dadosUsuario.senha !== dadosUsuario["confirmar-senha"]) {
         alert("As senhas não coincidem. Tente novamente.");
-        document.getElementById("confirmar-senha").value = "";
-        document.getElementById("confirmar-senha").focus();
-        return; // não continua
+        formCadastro.querySelector("#confirmar-senha").value = "";
+        formCadastro.querySelector("#confirmar-senha").focus();
+        return;
       }
 
-      // senhas ok -> salva e redireciona
-      const dadosUsuario = Object.fromEntries(new FormData(form));
+      // Remove campo de confirmação antes de salvar
+      delete dadosUsuario["confirmar-senha"];
+
+      // Recupera lista de usuários existentes
+      let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+      // Verifica se email já existe
+      if (usuarios.some(u => u.email === dadosUsuario.email)) {
+        alert("Usuário já existe!");
+        return;
+      }
+
+      // Adiciona novo usuário
+      usuarios.push(dadosUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+      // Define como usuário logado
       localStorage.setItem("usuarioAtual", JSON.stringify(dadosUsuario));
+
       window.location.href = "index.html";
+    });
+  }
+
+  // LOGIN
+  const formLogin = document.querySelector(".form-login");
+  if (formLogin) {
+    formLogin.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(formLogin);
+      const dadosLogin = Object.fromEntries(formData); // { email, senha }
+
+      let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+      let usuarioValido = usuarios.find(u => u.email === dadosLogin.email && u.senha === dadosLogin.senha);
+
+      if (usuarioValido) {
+        localStorage.setItem("usuarioAtual", JSON.stringify(usuarioValido));
+        window.location.href = "index.html";
+      } else {
+        alert("Email ou senha incorretos!");
+      }
     });
   }
 });
