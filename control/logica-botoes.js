@@ -1,6 +1,4 @@
-// -----------------------------------------------------------------------------------------
 // BARRA DE PESQUISA:
-// -----------------------------------------------------------------------------------------
 
 /*document.getElementById("search-button").addEventListener("click", function() {
   const query = document.getElementById("search-input").value.trim();
@@ -12,9 +10,7 @@
   }
 });*/
 
-// -----------------------------------------------------------------------------------------
 // CARRINHO:
-// -----------------------------------------------------------------------------------------
 
 //Adicionar ao carrinho
 document.addEventListener('click', (e) => {
@@ -29,9 +25,7 @@ document.addEventListener('click', (e) => {
   adicionarAoCarrinho(nome, id, preco, imagem);
 });
 
-// -----------------------------------------------------------------------------------------
 // FAVORITOS:
-// -----------------------------------------------------------------------------------------
 
 document.addEventListener('click', (e) => {
 

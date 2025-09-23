@@ -8,8 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (usuario && usuario.nome) {
     const primeiroNome = usuario.nome.split(" ")[0];
     bemVindo.textContent = `Olá, ${primeiroNome}!`;
-  } else {
-    bemVindo.textContent = "Olá!";
   }
 });
   
