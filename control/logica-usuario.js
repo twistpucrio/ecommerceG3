@@ -8,14 +8,10 @@ window.addEventListener('DOMContentLoaded', () => {
     bemVindo.textContent = `Olá, ${primeiroNome}!`;
   }
 
-  // Troca o link do perfil
-  const perfilLink = document.getElementById("perfil");
-  if (perfilLink) {
-    if (usuario) {
-      perfilLink.parentElement.setAttribute("href", "logout.html");
-    } else {
-      perfilLink.parentElement.setAttribute("href", "login.html"); 
-    }
+  // Troca o link do perfil (img dentro de <a>)
+  const perfilImg = document.getElementById("perfil");
+  if (perfilImg && perfilImg.parentElement) {
+    perfilImg.parentElement.setAttribute("href", usuario ? "logout.html" : "login.html");
   }
 
   // LOGOUT
@@ -27,14 +23,25 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // CADASTRO
+  // CADASTRO — submit handler unificado
   const formCadastro = document.querySelector(".form-cadastro");
   if (formCadastro) {
-    formCadastro.addEventListener("submit", function(event) {
+    formCadastro.addEventListener("submit", (event) => {
       event.preventDefault();
 
-      const formData = new FormData(event.target);
-      const dadosUsuario = Object.fromEntries(formData); // { nome, email, senha }
+      const formData = new FormData(formCadastro);
+      const dadosUsuario = Object.fromEntries(formData); // { nome, email, senha, confirmar-senha }
+
+      // Valida confirmação de senha
+      if (dadosUsuario.senha !== dadosUsuario["confirmar-senha"]) {
+        alert("As senhas não coincidem. Tente novamente.");
+        formCadastro.querySelector("#confirmar-senha").value = "";
+        formCadastro.querySelector("#confirmar-senha").focus();
+        return;
+      }
+
+      // Remove campo de confirmação antes de salvar
+      delete dadosUsuario["confirmar-senha"];
 
       // Recupera lista de usuários existentes
       let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -62,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
     formLogin.addEventListener("submit", function(event) {
       event.preventDefault();
 
-      const formData = new FormData(event.target);
+      const formData = new FormData(formLogin);
       const dadosLogin = Object.fromEntries(formData); // { email, senha }
 
       let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];

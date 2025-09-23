@@ -45,4 +45,3 @@ function adicionarAFavoritos(nome, id, preco, imagem) {
 
   alert(nome + " foi adicionado à lista de favoritos!");
 }
-

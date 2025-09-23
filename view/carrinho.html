@@ -30,6 +30,7 @@
   <p id="total"></p>
   <button id="finalizar">Finalizar Compra</button>
 </div>
+<button id="removerTodos">Remover Tudo</button>
 </div>
  
 <script>
@@ -51,6 +52,8 @@
     if (btn) btn.style.display = 'none';
     const tc = document.querySelector('.total-container');
     if (tc) tc.style.display = 'none';
+    const btnR= document.getElementById('removerTodos');
+    if(btnR) btnR.style.display='none';
     return;
   }
 
@@ -117,9 +120,39 @@ document.addEventListener('click', (e) => {
   window.addEventListener('load', atualizarTotal);
 </script>
  
-    <footer id="rodape">
+    
+    <script>
+    document.getElementById("removerTodos").onclick = () => {
+     
+    
+    // esvazia o carrinho
+    localStorage.removeItem("carrinho");
+    
+    // renderiza novamente a tela do carrinho
+    renderCarrinho();
+  };      
+    </script>
+
+     <script>
+document.getElementById("finalizar").onclick = () => {
+  const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
+
+  if (usuario) {
+    // Se o usuário estiver logado
+    alert("Compra concluída com sucesso, obrigada por comprar conosco!");
+    localStorage.removeItem("carrinho"); // esvazia o carrinho
+    renderCarrinho(); // atualiza a tela
+  } else {
+    // Se NÃO estiver logado → manda para cadastro
+    alert("É necessário se cadastrar para finalizar sua compra!");
+    window.location.href = "login.html";
+  }
+};
+</script>
+     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
     </footer>
+
 </body>
 </html>

@@ -729,3 +729,113 @@ h1.fav {
 #finalizar:hover {
   background-color: green;
 }
+
+#removerTodos{
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13pt;
+  font-family: 'principal';
+  transition: background 0.2s ease;
+}
+#removerTodosFav{
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13pt;
+  font-family: 'principal';
+  transition: background 0.2s ease;
+}
+/* container geral */
+
+/* Div de resultados da busca */
+
+/* Grid de resultados */
+#resultado {
+  display: none; /* começa escondida */
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+  gap: 24px;
+}
+
+/* Card de cada produto */
+#resultado .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff; /* fundo claro igual aos cards das outras páginas */
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  box-sizing: border-box;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#resultado .item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+/* Imagem do produto */
+#resultado .item img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #f9f9f9; /* deixa mais clean */
+}
+
+/* Nome do produto */
+#resultado .item h3 {
+  font-family: 'principal';
+  color: #3b0d16;
+  margin: 4px 0 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Descrição */
+#resultado .item p {
+  font-family: 'secundaria';
+  font-size: 14px;
+  color: #3b0d16;
+  text-align: center;
+  margin: 4px 0;
+}
+
+/* Preço */
+#resultado .item p.preco {
+  font-weight: bold;
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+/* Botão adicionar ao carrinho */
+#resultado .item button {
+  width: 90%;
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'secundaria';
+  font-weight: bold;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#resultado .item button:hover {
+  background-color: #1f6e57;
+  transform: translateY(-2px);
+}
