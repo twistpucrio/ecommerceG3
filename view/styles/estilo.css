@@ -422,6 +422,45 @@ button.btn-carrinho:hover{
   border: none;
 }
 
+#dados-logout{
+  width: 30%;
+  height: 300px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#dados-logout h1{
+  color: #3b0d16;
+  text-align: center;
+  font-family: 'principal';
+  font-size: 35pt;
+  margin-bottom: 30px;
+  padding: 25px;
+}
+
+#btn-logout{
+  background-color: #3b0d16;
+  border-radius: 5px;
+  font-family: 'secundaria';
+  font-size: 15pt;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  height: auto;     
+  cursor: pointer;
+  display: block;     
+  margin: 0 auto;
+}
+
+#txt-logout{
+  font-size: 17pt;
+  color: #2c0d0d;
+  font-family: 'secundaria';
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .img-carrinho {
    width: 140px;
   height: 100px;
