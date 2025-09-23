@@ -8,14 +8,10 @@ window.addEventListener('DOMContentLoaded', () => {
     bemVindo.textContent = `Olá, ${primeiroNome}!`;
   }
 
-  // Troca o link do perfil
-  const perfilLink = document.getElementById("perfil");
-  if (perfilLink) {
-    if (usuario) {
-      perfilLink.parentElement.setAttribute("href", "logout.html");
-    } else {
-      perfilLink.parentElement.setAttribute("href", "login.html"); 
-    }
+  // Troca o link do perfil (img dentro de <a>)
+  const perfilImg = document.getElementById("perfil");
+  if (perfilImg && perfilImg.parentElement) {
+    perfilImg.parentElement.setAttribute("href", usuario ? "logout.html" : "login.html");
   }
 
   // LOGOUT
@@ -27,40 +23,27 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // CADASTRO
-  const formCadastro = document.querySelector(".form-cadastro");
-  if (formCadastro) {
-    formCadastro.addEventListener("submit", function(event) {
-      event.preventDefault();
+  // CADASTRO — UM único submit handler
+  const form = document.querySelector(".form-cadastro");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-      const formData = new FormData(event.target);
-      const dadosUsuario = Object.fromEntries(formData);
+      const senha = document.getElementById("senha").value;
+      const confirmar = document.getElementById("confirmar-senha").value;
+
+      // valida antes de salvar
+      if (senha !== confirmar) {
+        alert("As senhas não coincidem. Tente novamente.");
+        document.getElementById("confirmar-senha").value = "";
+        document.getElementById("confirmar-senha").focus();
+        return; // não continua
+      }
+
+      // senhas ok -> salva e redireciona
+      const dadosUsuario = Object.fromEntries(new FormData(form));
       localStorage.setItem("usuarioAtual", JSON.stringify(dadosUsuario));
-
- 
-  // Redireciona para index.html depois do cadastro
-  window.location.href = "index.html";
-});
-
-//garantindo que a senha do cadastro coincide
-const form = document.querySelector(".form-cadastro");
-
-  form.addEventListener("submit", function (e) {
-    const senha = document.getElementById("senha").value;
-    const confirmarSenha = document.getElementById("confirmar-senha").value;
-
-    if (senha !== confirmarSenha) {
-      e.preventDefault(); // bloqueia o envio
-      alert("As senhas não coincidem. Tente novamente.");
-
-      // opcional: limpa o campo confirmar senha e foca nele
-      document.getElementById("confirmar-senha").value = "";
-      document.getElementById("confirmar-senha").focus();
-    }
-  });
- 
       window.location.href = "index.html";
     });
   }
 });
- 
