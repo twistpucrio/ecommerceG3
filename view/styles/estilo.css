@@ -750,11 +750,10 @@ h1.fav {
 /* Grid de resultados */
 #resultado {
   display: none; /* começa escondida */
-  max-width: 1200px;
-  margin: 40px auto;
+  max-width: 400px;
+  margin: 0 auto;
   padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: block;
   gap: 24px;
 }
 
