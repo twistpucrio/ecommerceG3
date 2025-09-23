@@ -1,11 +1,15 @@
+@import url(/view/fonts/Alice/Alice-Regular.ttf);
 @font-face {
     font-family: "principal";
-    src: url("/ecommerceG3/view/fonts/Alice/Alice-Regular.ttf") format('truetype');
+    src: url(/view/fonts/Alice/Alice-Regular.ttf)
+    format('truetype');
 }
 
+@import url(/view/fonts/Inria_Sans/InriaSans-Regular.ttf);
 @font-face {
     font-family: "secundaria";
-    src: url("/ecommerceG3/view/fonts/Inria_Sans/InriaSans-Regular.ttf") format('truetype');
+    src: url(/view/fonts/Inria_Sans/InriaSans-Regular.ttf)
+    format('truetype');
 }
 
 * {
@@ -623,6 +627,26 @@ h1.fav {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   color: black;}
 
+#bem-vindo{
+  font-family: 'principal';
+  color: white;
+  font-size: 25pt;
+  text-align: center;
+}
+
+#topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#icones-pequenos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  width: 250px;
  
 .total-container {
   display: flex;

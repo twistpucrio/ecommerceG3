@@ -1,6 +1,34 @@
 // CARRINHO:
 
-// Função para salvar no carrinho
+//Renderiza o carrinho
+function renderCarrinho() {
+      const div = document.getElementById('listaCarrinho');
+      const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+      if (carrinho.length === 0) {
+        div.innerHTML = `
+    <div class="msg-vazio">
+      <p>Oops... parece que seu carrinho está vazio!</p>
+      <a href="index.html" class="btn-voltar">Ver produtos</a>
+    </div>
+  `;
+      return;
+    }
+
+    // Cada item vem com um botão Remover
+    div.innerHTML = carrinho.map((item, i) => ` 
+      <div class="item-carrinho">
+        <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
+        <p>${item.nome} - R$ ${item.preco}</p>
+        <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
+          Remover
+        </button>
+      </div>
+    `).join('');
+  }
+  window.addEventListener('load', renderCarrinho);
+
+// Salvar produtos no carrinho
 function adicionarAoCarrinho(nome, id, preco, imagem) {
   let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
@@ -29,7 +57,7 @@ function adicionarAoCarrinho(nome, id, preco, imagem) {
 
 // FAVORITOS:
 
-// Função para salvar nos favoritos
+// Salvar produtos nos favoritos
 function adicionarAFavoritos(nome, id, preco, imagem) {
   let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
 
