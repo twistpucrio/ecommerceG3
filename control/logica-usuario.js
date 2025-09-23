@@ -1,16 +1,14 @@
-// INDEX:
-
-//Renderiza o nome do usuário na index:
 window.addEventListener('DOMContentLoaded', () => {
   const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
   const bemVindo = document.getElementById("bem-vindo");
 
-  if (usuario && usuario.nome) {
+  // Renderiza nome na index
+  if (usuario && usuario.nome && bemVindo) {
     const primeiroNome = usuario.nome.split(" ")[0];
     bemVindo.textContent = `Olá, ${primeiroNome}!`;
   }
 
-  // Troca o link do botão perfil dependendo do login
+  // Troca o link do perfil
   const perfilLink = document.getElementById("perfil");
   if (perfilLink) {
     if (usuario) {
@@ -19,20 +17,27 @@ window.addEventListener('DOMContentLoaded', () => {
       perfilLink.parentElement.setAttribute("href", "login.html"); 
     }
   }
-});
-  
-// CADASTRO:
 
-//Guarda os dados do usuário que se cadastrou:
-document.querySelector(".form-cadastro").addEventListener("submit", function(event) {
-  event.preventDefault(); // Previne o reload da página
+  // LOGOUT
+  const btnLogout = document.querySelector("#btn-logout");
+  if (btnLogout) {
+    btnLogout.addEventListener("click", () => {
+      localStorage.removeItem("usuarioAtual");
+      window.location.href = "index.html";
+    });
+  }
 
-  const formData = new FormData(event.target); // Cria um objeto que contém todos os inputs (com name) e seus respectivos valores
-  
-  const dadosUsuario = Object.fromEntries(formData);  // Exemplo: { nome: "Anna", email: "anna@email.com" }
-  console.log("Dados do formulário:", dadosUsuario);
-  localStorage.setItem("usuarioAtual", JSON.stringify(dadosUsuario));
+  // CADASTRO
+  const formCadastro = document.querySelector(".form-cadastro");
+  if (formCadastro) {
+    formCadastro.addEventListener("submit", function(event) {
+      event.preventDefault();
 
-  // Redireciona para index.html depois do cadastro
-  window.location.href = "index.html";
+      const formData = new FormData(event.target);
+      const dadosUsuario = Object.fromEntries(formData);
+      localStorage.setItem("usuarioAtual", JSON.stringify(dadosUsuario));
+
+      window.location.href = "index.html";
+    });
+  }
 });
