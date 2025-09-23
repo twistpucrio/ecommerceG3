@@ -9,6 +9,16 @@ window.addEventListener('DOMContentLoaded', () => {
     const primeiroNome = usuario.nome.split(" ")[0];
     bemVindo.textContent = `Olá, ${primeiroNome}!`;
   }
+
+  // Troca o link do botão perfil dependendo do login
+  const perfilLink = document.getElementById("perfil");
+  if (perfilLink) {
+    if (usuario) {
+      perfilLink.parentElement.setAttribute("href", "logout.html");
+    } else {
+      perfilLink.parentElement.setAttribute("href", "login.html"); 
+    }
+  }
 });
   
 // CADASTRO:
@@ -22,4 +32,7 @@ document.querySelector(".form-cadastro").addEventListener("submit", function(eve
   const dadosUsuario = Object.fromEntries(formData);  // Exemplo: { nome: "Anna", email: "anna@email.com" }
   console.log("Dados do formulário:", dadosUsuario);
   localStorage.setItem("usuarioAtual", JSON.stringify(dadosUsuario));
+
+  // Redireciona para index.html depois do cadastro
+  window.location.href = "index.html";
 });
