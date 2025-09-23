@@ -379,7 +379,7 @@ button.btn-carrinho:hover{
   border-radius: 10px;
 }
 
-.form-cadastro label{
+.form-cadastro label, .form-login label{
   font-family: 'secundaria';
   font-size: 20pt;
   color: #3b0d16;
@@ -387,7 +387,7 @@ button.btn-carrinho:hover{
   margin-top: 100px;
 }
 
-.form-cadastro input{
+.form-cadastro input, .form-login input{
   background-color: #3b0d16;
   border-radius: 5px;
   font-size: 13px;
@@ -403,7 +403,7 @@ button.btn-carrinho:hover{
   border: none;
 }
 
-.form-cadastro input::placeholder {
+.form-cadastro input::placeholder, .form-login input::placeholder{
   color: white;
   font-family: 'secundaria';
   font-size: 13pt;
@@ -419,6 +419,17 @@ button.btn-carrinho:hover{
   height: 60px;
   position: relative;
   left: 725px;
+  border: none;
+}
+
+.form-login button{
+  background-color: #3b0d16;
+  border-radius: 5px;
+  font-family: 'secundaria';
+  font-size: 13pt;
+  color: white;
+  padding: 20px;
+  height: 60px;
   border: none;
 }
 
