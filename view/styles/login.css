@@ -1,0 +1,29 @@
+/* Ajustes exclusivos do login */
+
+/* Deixa o container menor */
+#dados-container {
+  max-width: 780px;   
+  max-height: 600px;
+  padding: 30px;     
+}
+
+/* Ajusta inputs e botões pra ficarem proporcionais */
+#dados-container input {
+  padding: 10px;
+  font-size: 14px;
+}
+
+#dados-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 200px;       /* largura fixa do botão */
+  display: block;     /* necessário para o margin centralizar */
+  margin: 20px auto;  /* centraliza horizontalmente e dá espaço acima/baixo */
+}
+
+#dados-container .form-cadastro button {
+  width: 200px;       /* largura do botão */
+  display: block;     /* necessário para centralizar */
+  margin: 20px auto;  /* centraliza horizontalmente */
+  position: static;   /* garante que não fique deslocado */
+}
