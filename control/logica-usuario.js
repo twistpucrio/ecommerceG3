@@ -36,3 +36,20 @@ document.querySelector(".form-cadastro").addEventListener("submit", function(eve
   // Redireciona para index.html depois do cadastro
   window.location.href = "index.html";
 });
+
+//garantindo que a senha do cadastro coincide
+const form = document.querySelector(".form-cadastro");
+
+  form.addEventListener("submit", function (e) {
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmar-senha").value;
+
+    if (senha !== confirmarSenha) {
+      e.preventDefault(); // bloqueia o envio
+      alert("As senhas não coincidem. Tente novamente.");
+
+      // opcional: limpa o campo confirmar senha e foca nele
+      document.getElementById("confirmar-senha").value = "";
+      document.getElementById("confirmar-senha").focus();
+    }
+  });
