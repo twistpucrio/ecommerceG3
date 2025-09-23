@@ -24,6 +24,7 @@
  <div id="fav-container">
   <h1 class="fav">Lista de Favoritos</h1>
   <div id="listaFavoritos"></div>
+  <button id="removerTodosFav">Remover Tudo</button>
 </div>
 
       
@@ -42,6 +43,8 @@
     <a href="index.html" class="btn-voltar">Ver produtos</a>
   </div>
 `;
+   const btnRF= document.getElementById('removerTodosFav');
+    if(btnRF) btnRF.style.display='none';
       return;
     }
 
@@ -78,7 +81,17 @@
     renderFavoritos();
   });
 </script>
-       
+        <script>
+    document.getElementById("removerTodosFav").onclick = () => {
+     
+    
+    // esvazia o carrinho
+    localStorage.removeItem("favoritos");
+    
+    // renderiza novamente a tela do carrinho
+    renderFavoritos();
+  };      
+    </script>
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
