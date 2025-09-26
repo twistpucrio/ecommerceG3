@@ -27,3 +27,32 @@
   margin: 20px auto;  /* centraliza horizontalmente */
   position: static;   /* garante que não fique deslocado */
 }
+
+/* ===== Filtro por PREÇO (herda a estética do bloco) ===== */
+#filtroEsq .filtroEsq__preco{ display: grid; gap: 8px; }
+
+#filtroEsq .filtroEsq__row{
+  display: grid;
+  grid-template-columns: 1fr 140px; /* label | input */
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  background: #f7f7f7;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  font-family: 'secundaria';
+}
+
+#filtroEsq .filtroEsq__input{
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+}
+#filtroEsq .filtroEsq__input:focus{
+  outline: none;
+  border-color: #8d4654;
+  box-shadow: 0 0 0 2px rgba(141,70,84,.15);
+}

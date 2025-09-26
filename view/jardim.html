@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jardim</title>
     <link rel="stylesheet" href= "styles/estilo.css">
+    <link rel="stylesheet" href="styles/filtro.css">
     <script src="../control/renderiza-grid-produtos.js" defer></script>
     <script src="../model/funcoes.js" defer></script>
 </head>
@@ -33,6 +34,56 @@
         let pagina = "jardim";
     </script>
     
+     <aside id="filtroEsq" aria-labelledby="filtroEsqTitulo">
+  <div class="filtroEsq__inner">
+    <h2 id="filtroEsqTitulo">Filtrar por tipo</h2>
+    <form id="formFiltroEsq" class="filtroEsq__form">
+      <label class="filtroEsq__opt"><input type="checkbox" name="tipo" value="mesa"> Mesa</label>
+      <label class="filtroEsq__opt"><input type="checkbox" name="tipo" value="cadeira"> Cadeira</label>
+      <label class="filtroEsq__opt"><input type="checkbox" name="tipo" value="cama"> Cama</label>
+      <label class="filtroEsq__opt"><input type="checkbox" name="tipo" value="sofa"> Sofá</label>
+      <label class="filtroEsq__opt"><input type="checkbox" name="tipo" value="poltrona"> Poltrona</label>
+      <hr class="filtroEsq__hr">
+        <!-- ===== Filtro por PREÇO ===== -->
+<div class="filtroEsq__preco">
+  <label class="filtroEsq__row">
+    <span>Preço mín.</span>
+    <input
+      id="precoMin"
+      class="filtroEsq__input"
+      type="number"
+      inputmode="decimal"
+      min="0" step="0.01"
+      placeholder="ex.: 100"
+    />
+  </label>
+
+  <label class="filtroEsq__row">
+    <span>Preço máx.</span>
+    <input
+      id="precoMax"
+      class="filtroEsq__input"
+      type="number"
+      inputmode="decimal"
+      min="0" step="0.01"
+      placeholder="ex.: 1500"
+    />
+  </label>
+</div>
+<!-- ===== /Preço ===== -->
+      <div class="filtroEsq__acoes">
+        <button type="button" id="aplicarFiltroEsq" class="filtroEsq__btn">Aplicar</button>
+        <button type="button" id="limparFiltroEsq" class="filtroEsq__link">Limpar</button>
+      </div>
+      <small class="filtroEsq__legend">Dica: sem nada marcado, mostramos todos.</small>
+    </form>
+  </div>
+ 
+</aside>
+
+ <script src="../control/filtro-todos.js" defer></script>
+
+
     <footer id="rodape">
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
