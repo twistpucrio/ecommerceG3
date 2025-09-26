@@ -20,18 +20,21 @@
     </div>
 
        <br/><br/>
-   
-     <h1 class="carrinho">Seu Carrinho</h1>
 
- <div id="carrinho-container">
-  <h1 class="fav">Seu Carrinho</h1>
-  <div id="listaCarrinho"></div>
-   <div class="total-container">
-  <p id="total"></p>
-  <button id="finalizar">Finalizar Compra</button>
-</div>
-<button id="removerTodos">Remover Tudo</button>
-</div>
+    <div id="carrinho-container">
+      <h1 class="fav">Seu Carrinho</h1>
+      <div id="listaCarrinho"></div>
+      <button id="removerTodos">Remover Tudo</button>
+    </div>
+
+    <div id="carrinho-container">
+      <h1 class="fav">Resumo da Compra</h1>
+      <div class="total-container">
+        <p id="total" class="texto"></p>
+      </div>
+      <p class="texto">Forma de pagamento:</p>
+      <button id="finalizar">Finalizar Compra</button>
+    </div>
  
 <script>
 
@@ -153,6 +156,7 @@ document.getElementById("finalizar").onclick = () => {
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
     </footer>
-
+    
+    <script src="../control/logica-usuario.js"></script> 
 </body>
 </html>

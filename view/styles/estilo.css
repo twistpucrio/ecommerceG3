@@ -490,11 +490,11 @@ button.btn-carrinho:hover{
   margin-bottom: 20px;
 }
 
-h1.carrinho{
+h1.fav{
   color:white;
   text-align: center;
-  font-size: 50px;
-  font-family: "primaria";
+  font-size: 2.5rem;
+  font-family: "principal";
 }
 
 .btn-remover{
@@ -707,10 +707,12 @@ h1.fav {
   padding: 10px 0;
 }
 
-#total {
+.texto {
   font-size: 18pt;
   font-weight: bold;
   font-family: 'principal';
+  position: relative;
+  left: 10%;
 }
 
 #finalizar {
@@ -724,6 +726,8 @@ h1.fav {
   font-size: 18pt;
   font-family: 'principal';
   transition: background 0.2s ease;
+  position: relative;
+  left: 70%;
 }
 
 #finalizar:hover {
