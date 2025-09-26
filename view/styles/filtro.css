@@ -1,0 +1,39 @@
+/* ===== Filtro fixo à ESQUERDA — isolado ===== */
+#filtroEsq{
+  position: fixed;
+  left: 16px;
+  top: 120px;       /* deixa livre sua barra */
+  width: 280px;
+  z-index: 999;
+  background: #fff;
+  color: #3b0d16;
+  border-radius: 12px;
+  border: 1px solid #e7e2e2;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  max-height: calc(100vh - 150px);
+  overflow: auto;
+}
+
+#filtroEsq .filtroEsq__inner{ padding: 14px; display: grid; gap: 10px; }
+#filtroEsq h2{ margin:0; font-family:'principal'; font-size: 18pt; }
+#filtroEsq .filtroEsq__form{ display:grid; gap:8px; }
+#filtroEsq .filtroEsq__opt{
+  display:flex; align-items:center; gap:8px;
+  padding:8px 10px; background:#f7f7f7; border:1px solid #eee; border-radius:10px;
+  font-family:'secundaria';
+}
+#filtroEsq .filtroEsq__hr{ border:none; border-top:1px solid #eee; margin:8px 0; }
+#filtroEsq .filtroEsq__acoes{ display:flex; gap:8px; align-items:center; }
+#filtroEsq .filtroEsq__btn{
+  padding:8px 12px; border-radius:10px; background:#8d4654; color:#fff; border:none; font-weight:700; cursor:pointer;
+}
+#filtroEsq .filtroEsq__link{
+  background:none; border:none; color:#8d4654; text-decoration:underline; cursor:pointer; font:inherit;
+}
+#filtroEsq .filtroEsq__legend{ font-family:'secundaria'; color:#6b6b6b; }
+
+/* Responsivo: vira bottom-sheet simples */
+@media (max-width: 900px){
+  #filtroEsq{ left:16px; right:16px; width:auto; bottom:16px; top:auto; max-height: 60vh; }
+}
+

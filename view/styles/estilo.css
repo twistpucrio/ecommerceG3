@@ -840,6 +840,11 @@ h1.fav {
 
 #resultado .item button:hover {
   background-color: #1f6e57;
+ 
+  transform: translateY(-2px);
+}
+ 
+ 
   transform: translateY(-2px);}
 
   #resultado .nao-encontrado {
@@ -881,3 +886,4 @@ h1.fav {
   max-width: 90%; 
   margin: 0 auto; 
 }
+ 
