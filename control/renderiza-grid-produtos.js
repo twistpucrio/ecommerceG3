@@ -1,4 +1,4 @@
-fetch('../control/produtos.json')
+fetch('../model/produtos.json')
   .then(response => {
     if (!response.ok) {
       throw new Error("Erro ao carregar o JSON");
