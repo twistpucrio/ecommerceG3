@@ -187,6 +187,8 @@ a.texto-rodape, h2.texto-rodape {
   text-decoration: none;
   color: black;
   margin-top: 15px;
+  font-weight: bold; 
+  text-decoration:none
 }
 
 .link-rodape {
@@ -340,7 +342,7 @@ button.btn-carrinho:hover{
   width: 90%;
   margin: 10px auto 15px auto;
   padding: 10px;
-  background-color: #0c7019; /* cor do botão */
+  background-color: #3b0d16; /* cor do botão */
   color: white;
   border: none;
   border-radius: 6px;
@@ -354,7 +356,7 @@ button.btn-carrinho:hover{
   width: 90%;
   margin: 10px auto 15px auto;
   padding: 10px;
-  background-color: #fd3dad; /* cor do botão */
+  background-color: #3b0d16; /* cor do botão */
   color: white;
   border: none;
   border-radius: 6px;
@@ -364,8 +366,8 @@ button.btn-carrinho:hover{
   transition: background-color 0.2s, transform 0.2s;
 }
 
-.btn-add-carrinho:hover {
-  background-color: #ff4c3b;
+.btn-add-carrinho:hover, .btn-add-fav:hover {
+  background-color: #721f2f;
   transform: translateY(-2px);
 }
 
@@ -381,7 +383,7 @@ button.btn-carrinho:hover{
 
 .form-cadastro label, .form-login label{
   font-family: 'secundaria';
-  font-size: 20pt;
+  font-size: 1.2rem;
   color: #3b0d16;
   margin-left: 100px;
   margin-top: 100px;
@@ -390,7 +392,7 @@ button.btn-carrinho:hover{
 .form-cadastro input, .form-login input{
   background-color: #3b0d16;
   border-radius: 5px;
-  font-size: 13px;
+  font-size: 1.2rem;
   margin-left: 100px;
   margin-top: 20px;
   display: block;
@@ -406,7 +408,7 @@ button.btn-carrinho:hover{
 .form-cadastro input::placeholder, .form-login input::placeholder{
   color: white;
   font-family: 'secundaria';
-  font-size: 13pt;
+  font-size: 1.2rem;
 }
 
 .form-cadastro button{
@@ -489,17 +491,21 @@ button.btn-carrinho:hover{
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   margin-bottom: 20px;
 }
+.tit-carrinho{
+  font-family: 'secundaria';
+  color: #2c0d0d;
+}
 
 h1.fav{
   color:white;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "principal";
 }
 
 .btn-remover{
   border:0; padding:8px 12px; border-radius:8px; cursor:pointer;
-  background:#ef4444; color:#fff; font-weight:700;
+  background: #2c0d0d; color: #2c0d0d; font-weight:700;
 }
 .btn-remover:hover{ filter:brightness(1.05); }
 
@@ -652,8 +658,9 @@ h1.fav {
   padding: 0;
   display: flex;
   align-items: center;
-  color: #ef4444;
-  font-size: 16px;
+  color: #2c0d0d;
+  font-size: 1.2rem;
+  font-family: 'secundaria';
 }
 
 
@@ -708,9 +715,9 @@ h1.fav {
 }
 
 .texto {
-  font-size: 18pt;
+  font-size: 1.2rem;
   font-weight: bold;
-  font-family: 'principal';
+  font-family: 'secundaria';
   position: relative;
   left: 10%;
 }
@@ -722,12 +729,12 @@ h1.fav {
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 600;
-  font-size: 18pt;
+  font-weight: bold;
+  font-size: 1.2rem;
   font-family: 'principal';
   transition: background 0.2s ease;
   position: relative;
-  left: 70%;
+  left: 75%;
 }
 
 #finalizar:hover {

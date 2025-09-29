@@ -68,7 +68,7 @@ async function buscarProduto() {
   const termo = document.getElementById('search-input').value.toLowerCase();
 
   try {
-    const response = await fetch('../control/produtos.json');
+    const response = await fetch('../model/produtos.json');
     const dados = await response.json(); // dados = { produtos: [...] }
 
     const produtos = dados.produtos;

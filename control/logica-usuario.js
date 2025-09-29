@@ -40,6 +40,13 @@ window.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
+      const regexCEP = /^\d{5}-\d{3}$/;
+      if (!regexCEP.test(dadosUsuario.cep)) {
+        alert("CEP inválido! Use o formato *****-***.");
+        formCadastro.querySelector("#cep").focus();
+        return;
+      }
+
       // Remove campo de confirmação antes de salvar
       delete dadosUsuario["confirmar-senha"];
 
