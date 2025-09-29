@@ -63,7 +63,7 @@
   div.innerHTML = carrinho.map((item, i) => `
     <div class="item-carrinho">
       <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
-      <p>${item.nome} - R$ ${item.preco} x ${item.quantidade || 1}</p>
+      <p class="tit-carrinho">${item.nome} - R$ ${item.preco} x ${item.quantidade || 1}</p>
       <button class="btn-diminuir" data-index="${i}">-</button>
       <button class="btn-aumentar" data-index="${i}">+</button>
       <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
@@ -153,8 +153,9 @@ document.getElementById("finalizar").onclick = () => {
 };
 </script>
      <footer id="rodape">
-        <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
+        </br>
         <a href="sobreNos.html" class="texto-rodape">Sobre nós</a>
+        <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
     </footer>
     
     <script src="../control/logica-usuario.js"></script> 
