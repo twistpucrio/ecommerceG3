@@ -21,14 +21,15 @@
     </div>
   
        <br/><br/>
-
-       <div id="produtos-container">
-        <div id="grid" class="grid"></div>
+ <div id="search-container">
+        <input type="text" id="search-input" placeholder="Digite sua pesquisa..." />
+        <button id="search-button">Buscar</button>
     </div>
+        
 
     <script> let pagina = "todosProdutos"; </script>
 
-
+   <div class="layout"> </div>
     <aside id="filtroEsq" aria-labelledby="filtroEsqTitulo">
   <div class="filtroEsq__inner">
     <h2 id="filtroEsqTitulo">Filtrar por tipo</h2>
@@ -75,7 +76,11 @@
   </div>
  
 </aside>
-
+<div id="produtos-container">
+        <div id="grid" class="grid"></div>
+    </div>
+ 
+ </div>
  <script src="../control/filtro-todos.js" defer></script>
 
     <footer id="rodape">
