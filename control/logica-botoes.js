@@ -80,7 +80,7 @@ async function buscarProduto() {
     resultadoDiv.innerHTML = '';
 
     if (resultados.length === 0) {
-      resultadoDiv.innerHTML = '<p>Nenhum produto encontrado.</p>';
+      resultadoDiv.innerHTML = '<p class="nenhumproduto">Nenhum produto encontrado.</p>';
       return;
     }
 
@@ -97,7 +97,7 @@ async function buscarProduto() {
       resultadoDiv.appendChild(div);
     });
   } catch (error) {
-    resultadoDiv.innerHTML = '<p>Erro ao carregar produtos.</p>';
+    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar produtos.</p>';
     console.error('Erro ao buscar produtos:', error);
   }
 }

@@ -771,13 +771,12 @@ h1.fav {
 
 /* Grid de resultados */
 #resultado {
-  display: none; /* começa escondida */
-  max-width: 400px;
+  display: block;
+  max-width: 400px; /* mantém a largura que você gosta */
   margin: 0 auto;
   padding: 20px;
-  display: block;
-  gap: 24px;
 }
+
 
 /* Card de cada produto */
 #resultado .item {
@@ -848,5 +847,50 @@ h1.fav {
 
 #resultado .item button:hover {
   background-color: #1f6e57;
+ 
   transform: translateY(-2px);
 }
+ 
+ 
+  transform: translateY(-2px);}
+
+  #resultado .nao-encontrado {
+  font-family: 'secundaria';
+  font-size: 16px;
+  color: #3b0d16;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.nenhumproduto {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14pt;
+  font-family: 'principal', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+  max-width: 90%; 
+  margin: 0 auto; 
+}
+.erro{
+    background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14pt;
+  font-family: 'principal', sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: fit-content;
+  max-width: 90%; 
+  margin: 0 auto; 
+}
+ 
