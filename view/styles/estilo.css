@@ -850,10 +850,7 @@ h1.fav {
  
   transform: translateY(-2px);
 }
- 
- 
   
-
   #resultado .nao-encontrado {
   font-family: 'secundaria';
   font-size: 16px;
@@ -894,3 +891,4 @@ h1.fav {
   margin: 0 auto; 
 }
  
+

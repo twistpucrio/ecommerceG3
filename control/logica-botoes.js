@@ -56,15 +56,10 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
 document.getElementById('search-button').addEventListener('click', buscarProduto);
 
 async function buscarProduto() {
-  // 🧼 1. Esconde tudo da página
   document.getElementById('cate').style.display = 'none';
-
-  // 🧼 2. Garante que a área de resultado vai aparecer
   const resultadoDiv = document.getElementById('resultado');
   resultadoDiv.style.display = 'block';
   resultadoDiv.innerHTML = '<p>Carregando...</p>';
-
-  // 🔍 3. Faz a busca
   const termo = document.getElementById('search-input').value.toLowerCase();
 
   try {
@@ -88,16 +83,35 @@ async function buscarProduto() {
       const div = document.createElement('div');
       div.classList.add('item');
       div.innerHTML = `
-        <img src="${produto.imagem}" alt="${produto.nome}" style="width: 150px;">
-        <h3>${produto.nome}</h3>
-        <p>${produto.descricao}</p>
-        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-        <hr>
-      `;
+  <img src="${produto.imagem}" alt="${produto.nome}" style="width: 150px;">
+  <h3>${produto.nome}</h3>
+  <p>${produto.descricao}</p>
+  <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+
+  <button 
+    class="btn-carrinho" 
+    data-nome="${produto.nome}" 
+    data-id="${produto.id}" 
+    data-preco="${produto.preco}" 
+    data-imagem="${produto.imagem}">
+    Adicionar ao Carrinho
+  </button>
+
+  <button 
+    class="btn-favoritos" 
+    data-nome="${produto.nome}" 
+    data-id="${produto.id}" 
+    data-preco="${produto.preco}" 
+    data-imagem="${produto.imagem}">
+    Adicionar aos Favoritos
+  </button>
+
+  <hr>
+`;
       resultadoDiv.appendChild(div);
     });
   } catch (error) {
-    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar produtos.</p>';
+    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar botões.</p>';
     console.error('Erro ao buscar produtos:', error);
   }
 }
