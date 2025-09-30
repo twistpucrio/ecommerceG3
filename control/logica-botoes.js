@@ -111,7 +111,7 @@ async function buscarProduto() {
       resultadoDiv.appendChild(div);
     });
   } catch (error) {
-    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar produtos.</p>';
+    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar botões.</p>';
     console.error('Erro ao buscar produtos:', error);
   }
 }
