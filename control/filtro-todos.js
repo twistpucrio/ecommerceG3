@@ -15,7 +15,7 @@
   // se não reconhece a página, não roda
   if (!PAGE_RANGES[file]) return;
 
-  const DATA_URL = "../control/produtos.json";
+  const DATA_URL = "../model/produtos.json";
   const grid = document.getElementById("grid");
   const form = document.getElementById("formFiltroEsq");
   const btnAplicar = document.getElementById("aplicarFiltroEsq");
