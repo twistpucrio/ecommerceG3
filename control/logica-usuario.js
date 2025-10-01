@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // CADASTRO — submit handler unificado
+  // CADASTRO
   const formCadastro = document.querySelector(".form-cadastro");
   if (formCadastro) {
     formCadastro.addEventListener("submit", (event) => {

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href= "styles/estilo.css">
+    <link rel="stylesheet" href="styles/estilo.css">
 </head>
 <body>
     
     <div id="topbar">
-        <a href="index.html">  <img id="logo" class="logo" src="IMG/logo.png" alt="ML"><img></a>
+        <a href="index.html"><img id="logo" class="logo" src="IMG/logo.png" alt="ML"></a>
         <div id="icones-pequenos">
             <a href="login.html"> <img id="perfil" class="icon" src="IMG/perfil.png" alt="perfil"/> </a>
             <a href="favoritos.html"> <img id="favorite" class="icon" src="IMG/favorites.png" alt="favorite"/>  </a>
@@ -20,11 +20,14 @@
     <section id="principal">
         <div id="dados-container">
             <br/><br/>
-            <form class="form-cadastro">
+            <form class="form-cadastro" id="form-cadastro">
                 <h1>Cadastro</h1>
 
                 <label for="nome">Nome completo:</label>
                 <input class="campo-info" type="text" id="nome" name="nome" placeholder="Digite aqui" required>
+
+                <label for="cpf">CPF:</label>
+                <input class="campo-info" type="number" id="cpf" name="cpf" placeholder="Digite aqui" required>
 
                 <label for="email">E-mail:</label>
                 <input class="campo-info" type="email" id="email" name="email" placeholder="Digite aqui" required>
@@ -44,8 +47,7 @@
                 <label for="confirmar-senha">Confirmar senha:</label>
                 <input class="campo-info" type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Digite aqui" required>
 
-                <button type="submit">Enviar</button>
-
+                <button id="enviar-cadastro" type="submit">Enviar</button>
             </form>
         </div>
     </section>
@@ -56,7 +58,7 @@
         <h2 class="texto-rodape">MoveLar - Móveis e acessórios para todos os ambientes. Conforto, praticidade e estilo para sua casa e escritório.</h2>
     </footer>
 
-    <script src="../control/logica-usuario.js"></script>
-
+    <!-- lógica de cadastro -->
+                        <script src="../control/logica-usuario.js"></script>
 </body>
 </html>
