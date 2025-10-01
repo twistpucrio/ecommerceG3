@@ -3,7 +3,7 @@
   const path = window.location.pathname;
   const file = path.split("/").pop().replace(".html", "");
 
-  // mapeia ranges por página
+  // Mapeia ranges por página
   const PAGE_RANGES = {
     todosProdutos: [1, 68],
     sala: [1, 10],
@@ -12,7 +12,7 @@
     escritorio: [60, 68],
   };
 
-  // se não reconhece a página, não roda
+  // Se não reconhece a página, não roda
   if (!PAGE_RANGES[file]) return;
 
   const DATA_URL = "../model/produtos.json";
@@ -55,7 +55,7 @@
     }
   }
 
-  // --- render com seu visual
+  // Render com seu visual
   function render(lista) {
     grid.innerHTML = "";
     if (!lista.length) {
@@ -75,28 +75,37 @@
       info.className = "card-info";
       info.textContent = `${p.nome} - (${brl(p._precoNum ?? p.preco)})`;
 
-      const btnCar = document.createElement("button");
-      btnCar.className = "btn-add-carrinho";
-      btnCar.textContent = "Adicionar ao carrinho";
-      btnCar.addEventListener("click", () => {
-        if (typeof adicionarAoCarrinho === "function") {
-          adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
-        }
-      });
+      //const btnCar = document.createElement("button");
+      //btnCar.className = "btn-add-carrinho";
+      //btnCar.textContent = "Adicionar ao carrinho";
+      //btnCar.addEventListener("click", () => {
+      //  if (typeof adicionarAoCarrinho === "function") {
+      //    adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
+      //  }
+      //});
 
-      const btnFav = document.createElement("button");
-      btnFav.className = "btn-add-fav";
-      btnFav.textContent = "Adicionar a favoritos";
-      btnFav.addEventListener("click", () => {
-        if (typeof adicionarAFavoritos === "function") {
-          adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
-        }
-      });
+      //const btnFav = document.createElement("button");
+      //btnFav.className = "btn-add-fav";
+      //btnFav.textContent = "Adicionar a favoritos";
+      //btnFav.addEventListener("click", () => {
+      //  if (typeof adicionarAFavoritos === "function") {
+      //    adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
+      //  }
+      //});
+
+      const link = document.createElement('a');
+      link.href = `produto.html?id=${p.id}`;
+      link.className = 'link-produto';
+
+      link.innerHTML = `
+        <button class="btn-add-carrinho">Ver produto</button>
+      `;
 
       card.appendChild(img);
       card.appendChild(info);
-      card.appendChild(btnCar);
-      card.appendChild(btnFav);
+      card.appendChild(link);
+      //card.appendChild(btnCar);
+      //card.appendChild(btnFav);
       grid.appendChild(card);
     });
   }
@@ -124,7 +133,7 @@
     render(lista);
   }
 
-  // eventos
+  // Eventos
   if (btnAplicar) btnAplicar.addEventListener("click", aplicaFiltro);
   if (btnLimpar)
     btnLimpar.addEventListener("click", () => {
@@ -134,7 +143,7 @@
       render(all);
     });
 
-  // --- carregar produtos do JSON e filtrar pelo range da página
+  // Carregar produtos do JSON e filtrar pelo range da página
   fetch(DATA_URL)
     .then((r) => r.json())
     .then((d) => {
