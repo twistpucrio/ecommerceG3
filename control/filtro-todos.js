@@ -67,45 +67,42 @@
       const card = document.createElement("div");
       card.className = "card";
 
+      const link = document.createElement("a");
+      link.href = `produto.html?id=${p.id}`;
+      link.className = "link-produto";
+
       const img = document.createElement("img");
       img.src = p.imagem;
       img.alt = p.nome;
 
+  // Coloca a imagem dentro do link
+  link.appendChild(img);
       const info = document.createElement("div");
       info.className = "card-info";
       info.textContent = `${p.nome} - (${brl(p._precoNum ?? p.preco)})`;
 
-      //const btnCar = document.createElement("button");
-      //btnCar.className = "btn-add-carrinho";
-      //btnCar.textContent = "Adicionar ao carrinho";
-      //btnCar.addEventListener("click", () => {
-      //  if (typeof adicionarAoCarrinho === "function") {
-      //    adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
-      //  }
-      //});
+      const btnCar = document.createElement("button");
+      btnCar.className = "btn-add-carrinho";
+      btnCar.textContent = "Adicionar ao carrinho";
+      btnCar.addEventListener("click", () => {
+        if (typeof adicionarAoCarrinho === "function") {
+          adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
+        }
+      });
 
-      //const btnFav = document.createElement("button");
-      //btnFav.className = "btn-add-fav";
-      //btnFav.textContent = "Adicionar a favoritos";
-      //btnFav.addEventListener("click", () => {
-      //  if (typeof adicionarAFavoritos === "function") {
-      //    adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
-      //  }
-      //});
+      const btnFav = document.createElement("button");
+      btnFav.className = "btn-add-fav";
+      btnFav.textContent = "Adicionar a favoritos";
+      btnFav.addEventListener("click", () => {
+        if (typeof adicionarAFavoritos === "function") {
+          adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
+        }
+      });
 
-      const link = document.createElement('a');
-      link.href = `produto.html?id=${p.id}`;
-      link.className = 'link-produto';
-
-      link.innerHTML = `
-        <button class="btn-add-carrinho">Ver produto</button>
-      `;
-
-      card.appendChild(img);
-      card.appendChild(info);
       card.appendChild(link);
-      //card.appendChild(btnCar);
-      //card.appendChild(btnFav);
+      card.appendChild(info);
+      card.appendChild(btnCar);
+      card.appendChild(btnFav);
       grid.appendChild(card);
     });
   }
