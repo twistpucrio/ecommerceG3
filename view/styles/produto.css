@@ -1,0 +1,42 @@
+ #produto-container{
+  width: 30%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  color: #3b0d16;
+  align-items: center;
+ }
+
+ #produto-imagem{
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+ }
+
+ #produto-nome, #produto-preco{
+    font-family: 'principal';
+    color: #3b0d16;
+    font-size: 1.7rem;
+    margin: 20px 0;
+    text-align: center;
+ }
+
+ .btn-add{
+    display: block;
+    width: 30%;
+    margin: 10px auto 15px auto;
+    padding: 10px;
+    background-color: white; /* cor do botão */
+    color: #3b0d16;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    font-family: 'principal';
+    font-size: 1.5rem;
+}
