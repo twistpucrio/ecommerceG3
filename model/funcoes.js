@@ -32,7 +32,14 @@ function adicionarAoCarrinho(nome, id, preco, imagem) {
 // Salvar produtos nos favoritos
 function adicionarAFavoritos(nome, id, preco, imagem) {
   let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+ const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
 
+  if (!usuario) {
+    alert("É necessário estar logado para adicionar aos favoritos!");
+    window.location.href = "login.html";
+    return;
+  }
+  else{  
   let produto = {
     id: id,
     nome: nome,
@@ -45,3 +52,6 @@ function adicionarAFavoritos(nome, id, preco, imagem) {
 
   alert(nome + " foi adicionado à lista de favoritos!");
 }
+}
+
+ 
