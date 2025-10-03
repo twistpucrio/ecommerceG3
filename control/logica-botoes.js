@@ -27,20 +27,26 @@ document.addEventListener('click', (e) => {
 
 // FAVORITOS:
 
-document.addEventListener('click', (e) => {
-
-  
+ document.addEventListener('click', (e) => {
+  // Verifica se clicou no botão de carrinho
+  const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
   const btn = e.target.closest('.btn-favoritos');
   if (!btn) return;
 
-  const nome   = btn.dataset.nome;
-  const id     = Number(btn.dataset.id);
-  const preco  = Number(btn.dataset.preco);
-  const imagem = btn.dataset.imagem;
+  if (usuario) {
+    // Se o usuário estiver logado
+    const nome   = btn.dataset.nome;
+    const id     = Number(btn.dataset.id);
+    const preco  = Number(btn.dataset.preco);
+    const imagem = btn.dataset.imagem;
 
-  adicionarAFavoritos(nome, id, preco, imagem);
+    adicionarAFavoritos(nome, id, preco, imagem);
+  } else {
+    // Se NÃO estiver logado → manda para cadastro
+    alert("É necessário estar logado para adicionar ao favoritos!");
+    window.location.href = "login.html";
+  }
 });
-
 
 document.getElementById('search-input').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
@@ -103,6 +109,7 @@ async function buscarProduto() {
     data-id="${produto.id}" 
     data-preco="${produto.preco}" 
     data-imagem="${produto.imagem}">
+
     Adicionar aos Favoritos
   </button>
 
