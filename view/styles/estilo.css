@@ -85,6 +85,7 @@ img.categoria {
   font-size: 20px;
   cursor: pointer;
   margin: 1%;
+  display:inline-block;
 }
 
 #search-button:hover {
