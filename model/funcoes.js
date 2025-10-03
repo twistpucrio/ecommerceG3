@@ -39,6 +39,12 @@ function adicionarAFavoritos(nome, id, preco, imagem) {
     window.location.href = "login.html";
     return;
   }
+
+  const jaExiste = favoritos.some(item => item.id === id);
+  if (jaExiste) {
+    alert(nome + " já está na sua lista de favoritos!");
+    return;
+  }
   else{  
   let produto = {
     id: id,
