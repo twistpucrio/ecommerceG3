@@ -85,7 +85,7 @@ if (searchInput && searchButton) {
     let produtos = dados.produtos;
 
     // 👇 Filtro pela categoria da página, se houver
-    if (typeof pagina !== 'undefined') {
+    if (typeof pagina !== 'undefined' && pagina.toLowerCase() !== "todosprodutos") {
       produtos = produtos.filter(p => p.categoria.toLowerCase() === pagina.toLowerCase());
     }
 
