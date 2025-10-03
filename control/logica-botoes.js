@@ -48,21 +48,32 @@ document.addEventListener('click', (e) => {
   }
 });
 
-document.getElementById('search-input').addEventListener('keydown', function(event) {
-  if (event.key === 'Enter') {
-    event.preventDefault(); // evitar comportamento padrão (ex: submit)
-    document.getElementById('search-button').click(); // dispara o clique no botão
+// Pega os elementos, mas só adiciona evento se eles existirem na página
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+
+if (searchInput && searchButton) {
+  // Permite buscar apertando Enter no input
+  searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      searchButton.click();
+    }
+  });
+// Busca ao clicar no botão
+  searchButton.addEventListener('click', buscarProduto);
+}
+
+ async function buscarProduto() {
+  const topElement = document.getElementById('cate');
+  const productElement = document.getElementById('produtos-container');
+
+  if (topElement) {
+    topElement.style.display = 'none';
+  } else if (productElement) {
+    productElement.style.display = 'none';
   }
-});
 
-
-
-
-
-document.getElementById('search-button').addEventListener('click', buscarProduto);
-
-async function buscarProduto() {
-  document.getElementById('cate').style.display = 'none';
   const resultadoDiv = document.getElementById('resultado');
   resultadoDiv.style.display = 'block';
   resultadoDiv.innerHTML = '<p>Carregando...</p>';
@@ -70,10 +81,15 @@ async function buscarProduto() {
 
   try {
     const response = await fetch('../model/produtos.json');
-    const dados = await response.json(); // dados = { produtos: [...] }
+    const dados = await response.json();
+    let produtos = dados.produtos;
 
-    const produtos = dados.produtos;
+    // 👇 Filtro pela categoria da página, se houver
+    if (typeof pagina !== 'undefined') {
+      produtos = produtos.filter(p => p.categoria.toLowerCase() === pagina.toLowerCase());
+    }
 
+    // 👇 Filtro pelo termo digitado
     const resultados = produtos.filter(produto =>
       produto.nome.toLowerCase().includes(termo)
     );
@@ -89,36 +105,36 @@ async function buscarProduto() {
       const div = document.createElement('div');
       div.classList.add('item');
       div.innerHTML = `
-  <img src="${produto.imagem}" alt="${produto.nome}" style="width: 150px;">
-  <h3>${produto.nome}</h3>
-  <p>${produto.descricao}</p>
-  <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
+        <img src="${produto.imagem}" alt="${produto.nome}" style="width: 150px;">
+        <h3>${produto.nome}</h3>
+        <p>${produto.descricao}</p>
+        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
 
-  <button 
-    class="btn-carrinho" 
-    data-nome="${produto.nome}" 
-    data-id="${produto.id}" 
-    data-preco="${produto.preco}" 
-    data-imagem="${produto.imagem}">
-    Adicionar ao Carrinho
-  </button>
+        <button 
+          class="btn-carrinho" 
+          data-nome="${produto.nome}" 
+          data-id="${produto.id}" 
+          data-preco="${produto.preco}" 
+          data-imagem="${produto.imagem}">
+          Adicionar ao Carrinho
+        </button>
 
-  <button 
-    class="btn-favoritos" 
-    data-nome="${produto.nome}" 
-    data-id="${produto.id}" 
-    data-preco="${produto.preco}" 
-    data-imagem="${produto.imagem}">
+        <button 
+          class="btn-favoritos" 
+          data-nome="${produto.nome}" 
+          data-id="${produto.id}" 
+          data-preco="${produto.preco}" 
+          data-imagem="${produto.imagem}">
+          Adicionar aos Favoritos
+        </button>
 
-    Adicionar aos Favoritos
-  </button>
+        <hr>
+      `;
 
-  <hr>
-`;
       resultadoDiv.appendChild(div);
     });
   } catch (error) {
-    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar botões.</p>';
+    resultadoDiv.innerHTML = '<p class="erro">Erro ao carregar produtos.</p>';
     console.error('Erro ao buscar produtos:', error);
   }
 }
