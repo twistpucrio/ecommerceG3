@@ -2,6 +2,7 @@
   "produtos": [
     {
       "id": 1,
+      "categoria": "Sala",
       "nome": "cadeira sala",
       "preco": 295.00,
       "qtd": 10,
@@ -10,6 +11,7 @@
     },
     {
       "id": 2,
+      "categoria": "Sala",
       "nome": "sofa sala",
       "preco": 599.00,
       "qtd": 10,
@@ -18,6 +20,7 @@
     },
     {
       "id": 3,
+      "categoria": "Sala",
       "nome": "mesa sala",
       "preco": 700.00,
       "qtd": 10,
@@ -26,6 +29,7 @@
     },
     {
       "id": 4,
+      "categoria": "Sala",
       "nome": "poltrona sala",
       "preco": 450.00,
       "qtd": 10,
@@ -34,6 +38,7 @@
     },
     {
       "id": 5,
+      "categoria": "Sala",
       "nome": "mesa centro sala",
       "preco": 380.00,
       "qtd": 10,
@@ -42,6 +47,7 @@
     },
     {
       "id": 6,
+      "categoria": "Sala",
       "nome": "tapete sala",
       "preco": 250.00,
       "qtd": 10,
@@ -50,6 +56,7 @@
     },
     {
       "id": 7,
+      "categoria": "Sala",
       "nome": "mesa vidro",
       "preco": 950.00,
       "qtd": 10,
@@ -58,6 +65,7 @@
     },
     {
       "id": 8,
+      "categoria": "Sala",
       "nome": "sofa verde",
       "preco": 750.00,
       "qtd": 10,
@@ -66,6 +74,7 @@
     },
     {
       "id": 9,
+      "categoria": "Sala",
       "nome": "estante sala",
       "preco": 600.00,
       "qtd": 10,
@@ -74,6 +83,7 @@
     },
     {
       "id": 10,
+      "categoria": "Sala",
       "nome": "cômoda",
       "preco": 850.00,
       "qtd": 10,
@@ -95,6 +105,7 @@
 
     {
       "id": 11,
+      "categoria": "Jardim",
       "nome": "Espreguiçadeira de pano",
       "preco": 399.99,
       "qtd": 35,
@@ -103,6 +114,7 @@
     },
         {
       "id": 12,
+      "categoria": "Jardim",
       "nome": "Sofá outdoor de pano",
       "preco": 599.99,
       "qtd": 15,
@@ -111,6 +123,7 @@
     },
     {
       "id": 13,
+      "categoria": "Jardim",
       "nome": "Churrasqueira moderna metálica",
       "preco": 299.99,
       "qtd": 25,
@@ -119,6 +132,7 @@
     },
         {
       "id": 14,
+      "categoria": "Jardim",
       "nome": "Conjunto: mesa de vidro e cadeiras",
       "preco": 629.99,
       "qtd": 15,
@@ -127,6 +141,7 @@
     },
     {
       "id": 15,
+      "categoria": "Jardim",
       "nome": "Rede de pano para descanso",
       "preco": 129.99,
       "qtd": 40,
@@ -135,6 +150,7 @@
     },
     {
       "id": 16,
+      "categoria": "Jardim",
       "nome": "Mesa de centro de madeira",
       "preco": 129.99,
       "qtd": 40,
@@ -143,6 +159,7 @@
     },
     {
       "id": 17,
+      "categoria": "Jardim",
       "nome": "Puff redondo em tricô grosso",
       "preco": 129.99,
       "qtd": 40,
@@ -151,6 +168,7 @@
     },
         {
       "id": 30,
+      "categoria": "Quarto",
       "nome": "Armario Moderno",
       "preco": 1999.99,
       "qtd": 15,
@@ -159,6 +177,7 @@
     },
       {
       "id": 31,
+      "categoria": "Quarto",
       "nome": "Armario Vitoriano",
       "preco": 2999.99,
       "qtd": 15,
@@ -167,6 +186,7 @@
     },
       {
       "id": 32,
+      "categoria": "Quarto",
       "nome": "Cama Moderna",
       "preco": 1000.99,
       "qtd": 15,
@@ -175,6 +195,7 @@
     },
       {
       "id": 33,
+      "categoria": "Quarto",
       "nome": "Cama Praiana",
       "preco": 1000.99,
       "qtd": 15,
@@ -183,6 +204,7 @@
     },
          {
       "id": 34,
+      "categoria": "Quarto",
       "nome": "Cama Vitoriana",
       "preco": 1000.99,
       "qtd": 15,
@@ -191,6 +213,7 @@
     },
          {
       "id": 35,
+      "categoria": "Quarto",
       "nome": "Cortina Moderna",
       "preco": 1000.99,
       "qtd": 15,
@@ -199,6 +222,7 @@
     }  ,
       {
       "id": 36,
+      "categoria": "Quarto",
       "nome": "Cortina Praiana",
       "preco": 1000.99,
       "qtd": 15,
@@ -207,6 +231,7 @@
     },
       {
       "id": 37,
+      "categoria": "Quarto",
       "nome": "Cortina Vitoriana",
       "preco": 1000.99,
       "qtd": 15,
@@ -215,6 +240,7 @@
     },
        {
       "id": 38,
+      "categoria": "Quarto",
       "nome": "Estante Moderna",
       "preco": 1000.99,
       "qtd": 15,
@@ -224,6 +250,7 @@
 
 {
       "id": 39,
+      "categoria": "Quarto",
       "nome": "Estante Praiana",
       "preco": 1000.99,
       "qtd": 15,
@@ -233,6 +260,7 @@
       
 {
       "id": 40,
+      "categoria": "Quarto",
       "nome": "Estante Vitoriana",
       "preco": 1000.99,
       "qtd": 15,
@@ -241,6 +269,7 @@
     },
 {
       "id": 42,
+      "categoria": "Quarto",
       "nome": "Mesa de Cabeceira Moderna",
       "preco": 1000.99,
       "qtd": 15,
@@ -248,6 +277,7 @@
       "imagem": "IMG/quarto adulto/mesa de cabeceira moderna.png"
     } ,{
       "id": 43,
+      "categoria": "Quarto",
       "nome": "Mesa de Cabeceira praiana",
       "preco": 1000.99,
       "qtd": 20,
@@ -256,6 +286,7 @@
     }, 
     {
       "id": 44,
+      "categoria": "Quarto",
       "nome": "Mesa de Cabeceira vitoriana",
       "preco": 1000.99,
       "qtd": 20,
@@ -264,6 +295,7 @@
     }
       ,{
       "id": 45,
+      "categoria": "Quarto",
       "nome": "Mesa de Escritorio Moderna",
       "preco": 1000.99,
       "qtd": 20,
@@ -272,6 +304,7 @@
     }
     ,{
       "id": 46,
+      "categoria": "Quarto",
       "nome": "Mesa de Escritorio Vitoriana",
       "preco": 1000.99,
       "qtd": 20,
@@ -280,6 +313,7 @@
     },
     {
       "id": 47,
+      "categoria": "Quarto",
       "nome": "Tapete Moderno",
       "preco": 799.99,
       "qtd": 20,
@@ -288,6 +322,7 @@
     },
       {
       "id": 48,
+      "categoria": "Quarto",
       "nome": "Tapete praiano",
       "preco": 699.99,
       "qtd": 20,
@@ -296,6 +331,7 @@
     },
     {
       "id": 49,
+      "categoria": "Quarto",
       "nome": "Tapete vitoriano",
       "preco": 500.99,
       "qtd": 20,
@@ -304,6 +340,7 @@
     },
      {
       "id": 50,
+      "categoria": "Quarto",
       "nome": "Cama kawaii",
       "preco": 1500.99,
       "qtd": 20,
@@ -312,6 +349,7 @@
     },
       {
       "id": 51,
+      "categoria": "Quarto",
       "nome": "Comoda kawaii",
       "preco": 700.99,
       "qtd": 20,
@@ -320,6 +358,7 @@
     },
       {
       "id": 52,
+      "categoria": "Quarto",
       "nome": "Comoda zoo",
       "preco": 700.99,
       "qtd": 20,
@@ -328,6 +367,7 @@
     },
             {
       "id": 53,
+      "categoria": "Quarto",
       "nome": "Estante kawaii",
       "preco": 900.99,
       "qtd": 20,
@@ -336,6 +376,7 @@
     },
         {
       "id": 54,
+      "categoria": "Quarto",
       "nome": "Luminaria kawaii",
       "preco": 500.99,
       "qtd": 20,
@@ -344,6 +385,7 @@
     },
         {
       "id": 55,
+      "categoria": "Quarto",
       "nome": "Luminaria zoo",
       "preco": 500.99,
       "qtd": 20,
@@ -352,6 +394,7 @@
     },
         {
       "id": 56,
+      "categoria": "Quarto",
       "nome": "Mesa recreativa kawaii",
       "preco": 800.99,
       "qtd": 20,
@@ -360,6 +403,7 @@
     },
     {
       "id": 57,
+      "categoria": "Quarto",
       "nome": "Mesa recreativa zoo",
       "preco": 800.99,
       "qtd": 20,
@@ -368,6 +412,7 @@
     },
     {
       "id": 58,
+      "categoria": "Quarto",
       "nome": "Tapete kawaii",
       "preco": 500.99,
       "qtd": 20,
@@ -376,6 +421,7 @@
     },
     {
       "id": 59,
+      "categoria": "Quarto",
       "nome": "Tapete zoo",
       "preco": 500.99,
       "qtd": 20,
@@ -386,6 +432,7 @@
     
         {
       "id":60 ,
+      "categoria": "Escritorio",
       "nome": "Armário de escritório",
       "preco": 1500.00,
       "qtd": 5,
@@ -394,6 +441,7 @@
     },
     {
       "id":61,
+      "categoria": "Escritorio",
       "nome": "Cadeira confortável",
       "preco": 550.00,
       "qtd": 15,
@@ -402,6 +450,7 @@
     },
     {
       "id": 62,
+      "categoria": "Escritorio",
       "nome": "Cadeira básica",
       "preco": 350.00,
       "qtd": 10,
@@ -410,6 +459,7 @@
     },
     {
       "id": 63,
+      "categoria": "Escritorio",
       "nome": " Conjunto de cadeiras",
       "preco": 700.00,
       "qtd": 10,
@@ -418,6 +468,7 @@
     },
     {
       "id": 64,
+      "categoria": "Escritorio",
       "nome": "Luminária",
       "preco": 200.00,
       "qtd": 20,
@@ -426,6 +477,7 @@
     },
     {
       "id": 65,
+      "categoria": "Escritorio",
       "nome": "Mesa simples",
       "preco": 250.00,
       "qtd": 10,
@@ -434,6 +486,7 @@
     },
     {
       "id": 66,
+      "categoria": "Escritorio",
       "nome": "Mesa para funcionários",
       "preco": 950.00,
       "qtd": 10,
@@ -442,6 +495,7 @@
     },
     {
       "id": 67,
+      "categoria": "Escritorio",
       "nome": "Cadeira plus",
       "preco": 2050.00,
       "qtd": 5,
@@ -450,6 +504,7 @@
     },
     {
       "id": 68,
+      "categoria": "Escritorio",
       "nome": "Móvel com gavetas",
       "preco": 1200.00,
       "qtd": 10,

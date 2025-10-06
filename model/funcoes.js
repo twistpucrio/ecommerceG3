@@ -91,7 +91,20 @@ function atualizarTotal() {
 
 function adicionarAFavoritos(nome, id, preco, imagem) {
   let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+ const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
 
+  if (!usuario) {
+    alert("É necessário estar logado para adicionar aos favoritos!");
+    window.location.href = "login.html";
+    return;
+  }
+
+  const jaExiste = favoritos.some(item => item.id === id);
+  if (jaExiste) {
+    alert(nome + " já está na sua lista de favoritos!");
+    return;
+  }
+  else{  
   let produto = {
     id: id,
     nome: nome,
@@ -104,3 +117,6 @@ function adicionarAFavoritos(nome, id, preco, imagem) {
 
   alert(nome + " foi adicionado à lista de favoritos!");
 }
+}
+
+ 

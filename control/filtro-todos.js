@@ -3,17 +3,19 @@
   const path = window.location.pathname;
   const file = path.split("/").pop().replace(".html", "");
 
-  // Mapeia ranges por página
-  const PAGE_RANGES = {
-    todosProdutos: [1, 68],
-    sala: [1, 10],
-    jardim: [11, 23],
-    quarto: [30, 59],
-    escritorio: [60, 68],
+  // Mapeia ranges por categoria agora
+  const PAGE_CATEGORIAS = {
+    todosProdutos: null,
+    sala: "Sala",
+    jardim: "Jardim",
+    quarto: "Quarto",
+    escritorio: "Escritorio",
   };
 
+
   // Se não reconhece a página, não roda
-  if (!PAGE_RANGES[file]) return;
+  if (!(file in PAGE_CATEGORIAS)) return;
+
 
   const DATA_URL = "../model/produtos.json";
   const grid = document.getElementById("grid");
@@ -140,15 +142,16 @@
       render(all);
     });
 
-  // Carregar produtos do JSON e filtrar pelo range da página
+  // Carregar produtos do JSON e filtrar pela categoria da página
   fetch(DATA_URL)
     .then((r) => r.json())
     .then((d) => {
-      const [lo, hi] = PAGE_RANGES[file];
+      const categoria = PAGE_CATEGORIAS[file];
       const produtos = d.produtos || [];
-      const daPagina = produtos.filter(
-        (p) => Number(p.id) >= lo && Number(p.id) <= hi
-      );
+      const daPagina = categoria
+        ? produtos.filter((p) => p.categoria === categoria)
+        : produtos;
+
 
       all = daPagina.map((p) => ({
         ...p,
