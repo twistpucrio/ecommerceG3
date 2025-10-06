@@ -92,7 +92,6 @@ document.addEventListener('click', (e) => {
 });
 
 // BUSCA:
-=======
  document.addEventListener('click', (e) => {
   // Verifica se clicou no botão de carrinho
   const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
@@ -132,6 +131,7 @@ if (searchInput && searchButton) {
   });
 // Busca ao clicar no botão
   searchButton.addEventListener('click', buscarProduto);
+}
 }
 
  async function buscarProduto() {
