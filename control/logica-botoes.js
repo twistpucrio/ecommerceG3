@@ -1,18 +1,7 @@
-// BARRA DE PESQUISA:
-
-/*document.getElementById("search-button").addEventListener("click", function() {
-  const query = document.getElementById("search-input").value.trim();
-  if (query) {
-    // Exemplo: redirecionar para uma página de resultados
-    window.location.href = "resultados.html?q=" + encodeURIComponent(query);
-  } else {
-    alert("Digite algo para pesquisar!");
-  }
-});*/
-
 // CARRINHO:
 
-//Adicionar ao carrinho
+// ------------------- Adicionar ao carrinho ------------------- 
+
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.btn-carrinho');
   if (!btn) return;
@@ -25,7 +14,68 @@ document.addEventListener('click', (e) => {
   adicionarAoCarrinho(nome, id, preco, imagem);
 });
 
+//  ------- Aumentar e diminuir quantidades ------- 
+
+document.addEventListener('click', (e) => {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+  // Aumentar quantidade
+  if (e.target.classList.contains('btn-aumentar')) {
+    const idx = Number(e.target.dataset.index);
+    carrinho[idx].quantidade = (carrinho[idx].quantidade || 1) + 1;
+  }
+
+  // Diminuir quantidade
+  if (e.target.classList.contains('btn-diminuir')) {
+    const idx = Number(e.target.dataset.index);
+    if ((carrinho[idx].quantidade || 1) > 1) {
+      carrinho[idx].quantidade -= 1;
+    } else {
+      // Se quantidade chega a 0, remove do carrinho
+      carrinho.splice(idx, 1);
+    }
+  }
+
+  // Remover completamente
+  if (e.target.classList.contains('btn-remover')) {
+    const idx = Number(e.target.dataset.index);
+    carrinho.splice(idx, 1);
+  }
+
+  localStorage.setItem('carrinho', JSON.stringify(carrinho));
+  renderCarrinho();
+});
+
+// ----------------- Remover todos -----------------
+
+document.getElementById("removerTodos").onclick = () => {
+  // esvazia o carrinho
+  localStorage.removeItem("carrinho");
+  
+  // renderiza novamente a tela do carrinho
+  renderCarrinho();
+};
+
+// ------------------- Finalizar compra ------------------- 
+
+document.getElementById("finalizar").onclick = () => {
+  const usuario = JSON.parse(localStorage.getItem("usuarioAtual"));
+
+  if (usuario) {
+    // Se o usuário estiver logado
+    alert("Compra concluída com sucesso, obrigada por comprar conosco!");
+    localStorage.removeItem("carrinho"); // esvazia o carrinho
+    renderCarrinho(); // atualiza a tela
+  } else {
+    // Se NÃO estiver logado → manda para cadastro
+    alert("É necessário se cadastrar para finalizar sua compra!");
+    window.location.href = "login.html";
+  }
+};
+
 // FAVORITOS:
+
+// ------------------- Adicionar aos favoritos ------------------- 
 
 document.addEventListener('click', (e) => {
 
@@ -41,6 +91,7 @@ document.addEventListener('click', (e) => {
   adicionarAFavoritos(nome, id, preco, imagem);
 });
 
+// BUSCA:
 
 document.getElementById('search-input').addEventListener('keydown', function(event) {
   if (event.key === 'Enter') {
@@ -48,10 +99,6 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
     document.getElementById('search-button').click(); // dispara o clique no botão
   }
 });
-
-
-
-
 
 document.getElementById('search-button').addEventListener('click', buscarProduto);
 
