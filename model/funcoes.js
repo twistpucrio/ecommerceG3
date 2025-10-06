@@ -27,9 +27,12 @@ function renderCarrinho() {
   div.innerHTML = carrinho.map((item, i) => `
     <div class="item-carrinho">
       <img class="img-carrinho" src="${item.imagem}" width="100" alt="${item.nome}">
-      <p class="tit-carrinho">${item.nome} - R$ ${item.preco} x ${item.quantidade || 1}</p>
-      <button class="btn-diminuir" data-index="${i}">-</button>
-      <button class="btn-aumentar" data-index="${i}">+</button>
+      <p class="tit-carrinho">${item.nome} - R$ ${item.preco}</p>
+      <div class="controle-quantidade">
+        <button class="btn-diminuir" data-index="${i}">-</button>
+        <span class="quantidade">${item.quantidade||1}</span>
+        <button class="btn-aumentar" data-index="${i}">+</button>
+      </div>
       <button class="btn-remover" data-index="${i}" aria-label="Remover ${item.nome}">
         Remover
       </button>
