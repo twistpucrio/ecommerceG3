@@ -1,5 +1,5 @@
  // produto.js — preenche a página de produto e injeta data-* nos botões
-// para o listener delegado global (logica-botoes.js)
+// para o listener delegado global (logica-botoes-produtos.js)
 
 (function () {
   const DATA_URL = "../model/produtos.json"; // ajuste se o seu caminho for outro
