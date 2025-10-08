@@ -73,9 +73,48 @@
       link.href = `produto.html?id=${p.id}`;
       link.className = "link-produto";
 
+      let imagemSelecionada = p.imagem;
+
       const img = document.createElement("img");
-      img.src = p.imagem;
+      img.src = imagemSelecionada;
       img.alt = p.nome;
+
+      if (Array.isArray(p.variacoes)) {
+  const containerVariacoes = document.createElement("div");
+  containerVariacoes.className = "variacoes";
+
+    p.variacoes.forEach((v, index) => {
+    const btnVar = document.createElement("button");
+    btnVar.textContent = v.cor;
+    btnVar.className = "btn-var";
+
+    // Ativa o primeiro botão e atualiza a imagem
+    if (index === 0) {
+      btnVar.classList.add("ativo");  // marca como ativo
+      imagemSelecionada = v.imagem;
+      img.src = imagemSelecionada;
+    }
+
+    btnVar.addEventListener("click", () => {
+      // Remove classe 'ativo' dos outros botões
+      containerVariacoes.querySelectorAll("button").forEach(btn => {
+        btn.classList.remove("ativo");
+      });
+
+      // Marca o botão clicado como ativo
+      btnVar.classList.add("ativo");
+
+      // Atualiza a imagem
+      imagemSelecionada = v.imagem;
+      img.src = imagemSelecionada;
+    });
+
+    containerVariacoes.appendChild(btnVar);
+  });
+
+  card.appendChild(containerVariacoes);  
+}  
+
 
   // Coloca a imagem dentro do link
   link.appendChild(img);
@@ -88,7 +127,8 @@
       btnCar.textContent = "Adicionar ao carrinho";
       btnCar.addEventListener("click", () => {
         if (typeof adicionarAoCarrinho === "function") {
-          adicionarAoCarrinho(p.nome, p.id, p.preco, p.imagem);
+          adicionarAoCarrinho(p.nome, p.id, p.preco, imagemSelecionada);
+
         }
       });
 
@@ -96,10 +136,10 @@
       btnFav.className = "btn-add-fav";
       btnFav.textContent = "Adicionar a favoritos";
       btnFav.addEventListener("click", () => {
-        if (typeof adicionarAFavoritos === "function") {
-          adicionarAFavoritos(p.nome, p.id, p.preco, p.imagem);
-        }
-      });
+  if (typeof adicionarAFavoritos === "function") {
+    adicionarAFavoritos(p.nome, p.id, p.preco, imagemSelecionada);
+  }
+});
 
       card.appendChild(link);
       card.appendChild(info);
