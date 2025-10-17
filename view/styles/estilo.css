@@ -430,7 +430,7 @@ button.btn-favoritos:hover{
 
 #dados-container{
   width: 50%;
-  height: 1250px;
+  height: 1350px;
   margin: 50px auto;
   background-color: white;
   border-radius: 10px;
@@ -475,7 +475,7 @@ button.btn-favoritos:hover{
   padding: 20px;
   height: 60px;
   position: relative;
-  left: 725px;
+  left: 715px;
   border: none;
 }
 
@@ -967,6 +967,7 @@ h1.fav {
     justify-content: center;
     align-items: stretch;
 }
+
 
 
 #produto-imagem{
