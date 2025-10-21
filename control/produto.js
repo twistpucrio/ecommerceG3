@@ -2,13 +2,16 @@
 // para o listener delegado global (logica-botoes-produtos.js)
 
 (function () {
-  const DATA_URL = "../model/produtos.json"; // ajuste se o seu caminho for outro
+  const DATA_URL = "http://wei.tecgraf.puc-rio.br:8003/api/products"; // ajuste se o seu caminho for outro
 
   function getIdFromURL() {
     const sp = new URLSearchParams(window.location.search);
     return sp.get("id");
   }
-
+  function getCAtFromURL () {
+    const sl = new URLSearchParams(window.location.search);
+    return sl.get("categoria");
+  }
   async function carregarProdutos() {
     const resp = await fetch(DATA_URL);
     if (!resp.ok) throw new Error("Não foi possível carregar os produtos.");
@@ -62,12 +65,15 @@
   async function init() {
     try {
       const id = getIdFromURL();
-      if (!id) throw new Error("Parâmetro ?id não encontrado na URL.");
+      const link = DATA_URL + '/:id=' + id;
+      const categoria= getCAtFromURL();
+      const ss = DATA_URL + '/categoria/:categoria=' + categoria;
+      if (!categoria) throw new Error("Parâmetro ?id não encontrado na URL.");
 
       const data = await carregarProdutos();
       // seu JSON pode vir como { produtos: [...] } ou como [...]
       const lista = Array.isArray(data) ? data : (data.produtos || []);
-      const produto = lista.find((p) => String(p.id) === String(id));
+      const produto = lista.find((p) => String(p.categoria) === String(categoria));
       if (!produto) throw new Error("Produto não encontrado.");
 
       preencherCampos(produto);
